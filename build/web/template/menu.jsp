@@ -34,10 +34,10 @@
                         <!-- Sistema para registrar ventas del dia-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/SalesController">Venta</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/sales/sales.jsp">Venta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/NewSaleController">Nueva venta</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/sales/new_sale.jsp">Nueva venta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categoria</a>
