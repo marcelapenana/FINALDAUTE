@@ -25,7 +25,7 @@
         <div class="container mt-4">                                   
             <div class="row text-center mt-4">
                 <div class="col-12 table-responsive-sm">
-                 <table class="table table-info table-striped">
+                    <table class="table table-info table-striped">
                         <tr>
                             <th scope="col">USUARIO</th>                       
                         </tr>
@@ -34,38 +34,38 @@
                         NUEVA USUARIO
                     </button>
                     <hr>
-                   <table class="table table-sm table-hover table-info table-bordered table-striped">
+                    <table class="table table-sm table-hover table-info table-bordered table-striped">
                         <thead class=" table-danger text-center">    
-                    <tr>
-                        <th scope="col">CÓDIGO</th>
-                        <th scope="col">NOMBRE</th>
-                        <th scope="col">USUARIO</th>
-                        <th scope="col">CONTRASEÑA</th>
-                        <th scope="col">ROL</th>                     
-                        <th scope="col">ACCIONES</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <%                
-                        ArrayList<UsersC> listaU = usersDAO.mostrarU();
-                        for (UsersC elem : listaU) {
-                    %>
-                    <tr>
-                        <td><%=elem.getUseId()%></td>
-                        <td><%=elem.getUseRealName()%></td>   
-                        <td><%=elem.getUserName()%></td>
-                        <td><%=elem.getPassword()%></td>
-                        <td><%=elem.getRolId()%></td>                      
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr> 
-                    <% }%>
-                </tbody>
-            </table> 
+                            <tr>
+                                <th scope="col">CÓDIGO</th>
+                                <th scope="col">NOMBRE</th>
+                                <th scope="col">USUARIO</th>
+                                <th scope="col">CONTRASEÑA</th>
+                                <th scope="col">ROL</th>                     
+                                <th scope="col">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                                ArrayList<UsersC> listaU = usersDAO.mostrarU();
+                                for (UsersC elem : listaU) {
+                            %>
+                            <tr>
+                                <td><%=elem.getUseId()%></td>
+                                <td><%=elem.getUseRealName()%></td>   
+                                <td><%=elem.getUserName()%></td>
+                                <td><%=elem.getPassword()%></td>
+                                <td><%=elem.getRolId()%></td>                      
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
+                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
+                                    </div>
+                                </td>
+                            </tr> 
+                            <% }%>
+                        </tbody>
+                    </table> 
                 </div> 
             </div>                         
             ${msg}
@@ -90,21 +90,21 @@
                                 <input type="text" name="txtContra" id="txtContra" class="form-control">
                                 ROL
                                 <select name="sRol" class="form-control" id="sRol">                                    
-                                 <%
-                                ArrayList<RolesC> listaR = rolesDAO.mostrarR();
-                                for (RolesC elem : listaR) {
-                                %>                                   
-                                <option value="<%=elem.getIdRol()%>"><%=elem.getRolType()%></option>
-                                <%
-                                }
-                                %>
-                        </select>                 
+                                    <%
+                                        ArrayList<RolesC> listaR = rolesDAO.mostrarR();
+                                        for (RolesC elem : listaR) {
+                                    %>                                   
+                                    <option value="<%=elem.getIdRol()%>"><%=elem.getRolType()%></option>
+                                    <%
+                                        }
+                                    %>
+                                </select>                 
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                <button class="btn btn-primary" name="btnAgregar" id="btnAgregar">Agregar</button>
-                                <button class="btn btn-success" name="btnEditar" id="btnEditar">Editar</button>
-                                <button class="btn btn-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
+                                <button class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
+                                <button class="btn btn-outline-primary" name="btnAgregar" id="btnAgregar">Agregar</button>
+                                <button class="btn btn-outline-success" name="btnEditar" id="btnEditar">Editar</button>
+                                <button class="btn btn-outline-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
                             </div>
                         </form>
                     </div>

@@ -43,7 +43,7 @@
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categoria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/clients/registrarClientes.jsp">C</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Cliente</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">B</a>

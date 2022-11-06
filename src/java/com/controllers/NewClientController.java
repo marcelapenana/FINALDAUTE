@@ -61,7 +61,7 @@ public class NewClientController extends HttpServlet {
 
             // MENSAJE Y RESPUESTA
             request.setAttribute("mensaje", mensaje);
-            request.getRequestDispatcher("views/clients/registrarClientes.jsp").forward(request, response);
+            request.getRequestDispatcher("views/registrarClientes.jsp").forward(request, response);
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
