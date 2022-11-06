@@ -31,15 +31,14 @@
         <!-- Google Charts -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
     </head>
-<<<<<<< HEAD
     <body> 
-=======
+
 
     <body> 
 
     <body>
 
->>>>>>> 0117390dad961823441e42dc3cbc4c102c3713fd
+
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -55,7 +54,7 @@
                             SRVD | Home <span class="sr-only">(current)</span></a>
                         <!-- Sistema para registrar ventas del dia-->
                     </li>
-<<<<<<< HEAD
+
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categorias</a>
                     </li>
@@ -64,7 +63,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>
-=======
+
                      <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Rol</a>
                     </li>
@@ -74,12 +73,12 @@
                       <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
 
->>>>>>> 0117390dad961823441e42dc3cbc4c102c3713fd
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
                     </li>
-<<<<<<< HEAD
+
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Roles</a>
                     </li>
@@ -87,12 +86,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/cars/cars.jsp">Carros</a>
                     </li>
-=======
+
                      <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>                      
                     </li> 
                     <li class="nav-item">
->>>>>>> 0117390dad961823441e42dc3cbc4c102c3713fd
+
 
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Clientes</a>
                     </li>                                                                                                                                                                                                                      
@@ -106,7 +105,7 @@
                              aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/SalesController">Ventas</a>
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/NewSaleController">Nueva Venta</a>
-<<<<<<< HEAD
+
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/DashBoardController">Ventas por dia</a>
                         </div>  
                     </li>    
@@ -122,16 +121,8 @@
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Marcas.jsp">Marcas</a>
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Catalogo.jsp">Catalogo</a>
                         </div>
-=======
-                        </div>                       
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Auto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/catalogo.jsp">Catalogo</a>
->>>>>>> 0117390dad961823441e42dc3cbc4c102c3713fd
-                    </li>
-                    <li class="nav-item dropdown">
+
+                        <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
                            id="navbarDropdownMenuLink" data-toggle="dropdown" 
                            aria-haspopup="true" aria-expanded="false">
@@ -144,6 +135,8 @@
                                 Cerrar Sesión</button>
                         </form>
                     </li>
+                        </div>                                          
+                    
                 </ul>
             </div>
         </nav>  

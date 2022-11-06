@@ -104,7 +104,7 @@
                                 Marcas
                                 <select name="sMarcas" class="form-control" id="sMarcas">                                    
                                     <%
-                                        ArrayList<Brands> listaBrands = brandsDAO.mostrarBrands();
+                                        ArrayList<Brands> listaBrands = brandsDAO.mostrarB();
                                         for (Brands elem : listaBrands) {
                                     %>
                                     <option value="<%=elem.getBraID()%>"><%=elem.getBraName()%></option>  
