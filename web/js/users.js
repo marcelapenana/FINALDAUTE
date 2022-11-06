@@ -27,6 +27,6 @@ function llenarFormulario(fila){
     $("#txtUsuario").val(usuario);
     $("#txtContra").val(contra);
     $("#sRol option:contains("+rol+ ")").attr("selected", true);
-   //constain   contain
-      
-}
+   
+ 
+ }   

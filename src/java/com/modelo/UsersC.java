@@ -12,9 +12,10 @@ public class UsersC {
    private int useId;
     private String useRealName;
     private String userName;
-    private String password;  
-    private String rol;
+    private String password;    
+    private String rolType;
     private int rolId;
+    
 
     public UsersC() {
     }
@@ -23,11 +24,9 @@ public class UsersC {
         this.useId = useId;
         this.useRealName = useRealName;
         this.userName = userName;
-        this.password = password;
+        this.password = password;    
         this.rolId = rolId;
     }
-
-    
 
     public int getUseId() {
         return useId;
@@ -61,12 +60,12 @@ public class UsersC {
         this.password = password;
     }
 
-    public String getRol() {
-        return rol;
+    public String getRolType() {
+        return rolType;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setRolType(String rolType) {
+        this.rolType = rolType;
     }
 
     public int getRolId() {
@@ -75,5 +74,8 @@ public class UsersC {
 
     public void setRolId(int rolId) {
         this.rolId = rolId;
-    } 
+    }
+
+   
+    
 }

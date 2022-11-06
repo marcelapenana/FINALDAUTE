@@ -44,15 +44,15 @@ public class BrandsControllers extends HttpServlet {
 
             if (request.getParameter("btnAgregar") != null) {
                 int res = catDAO.insertarB(cat);
-                mensaje = (res != 0) ? "CATEGORIA INSERTADA" : "ERROR AL INSERTAR";
+                mensaje = (res != 0) ? "MARCA INSERTADA" : "ERROR AL INSERTAR";
             }
             if (request.getParameter("btnEliminar") != null) {
                 int res = catDAO.eliminarB(cat);
-                mensaje = (res != 0) ? "CATEGORIA ELIMINADA" : "ERROR AL ELIMINAR";
+                mensaje = (res != 0) ? "MARCA ELIMINADA" : "ERROR AL ELIMINAR";
             }
             if (request.getParameter("btnEditar") != null) {
                 int res = catDAO.modificarB(cat);
-                mensaje = (res != 0) ? "CATEGORIA MODIFICADA" : "ERROR AL MODIFICAR ";
+                mensaje = (res != 0) ? "MARCA MODIFICADA" : "ERROR AL MODIFICAR ";
             }
 
             request.setAttribute("mensaje", mensaje);

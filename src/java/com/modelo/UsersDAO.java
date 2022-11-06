@@ -15,25 +15,29 @@ import java.util.ArrayList;
  * @author najera
  */
 public class UsersDAO extends Conexion{
-    public int insertarU(UsersC r){
-        int res=0;
+    
+     public int insertarU(UsersC r) {
+        int res = 0;
         try {
             this.conectar();
-            String mysql=("insert into users(use_real_name, use_username, use_password, use_rol_id) values (?,?,?,?)");
-            PreparedStatement pre= this.getCon().prepareStatement(mysql);
+            String sql = "insert into users(use_real_name, use_username, use_password, use_rol_id) values (?,?,?,?)";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
             pre.setString(1, r.getUseRealName());
             pre.setString(2, r.getUserName());
             pre.setString(3, r.getPassword());
             pre.setInt(4, r.getRolId());
-        } catch (Exception e) {
-            System.out.println("Error al insertar"+ e.getMessage());
-        }finally{
-        this.desconectar();
-        }       
+            
+            res = pre.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Error al insertar" + e.getMessage());
+        } finally {
+            this.desconectar();
+        }
         return res;
     }
+ 
     
-
     public ArrayList<UsersC> mostrarU() {
         ArrayList<UsersC> listaUsers = new ArrayList<>();
         try {

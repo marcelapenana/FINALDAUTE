@@ -74,12 +74,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/cars/cars.jsp">Carros</a>
                     </li>
-                    <li class="nav-item">
-
-
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Clientes</a>
-                    </li>                                                                                                                                                                                                                      
-                   
+                                                                                                                                                                                                                                                          
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
                            id="navbarDropdownMenuLink" data-toggle="dropdown" 
