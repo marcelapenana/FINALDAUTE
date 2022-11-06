@@ -4,7 +4,7 @@
     Author     : najera
 --%>
 
-<%@include file="../template/menu.jsp" %>
+<%@include file="../../template/menu.jsp" %>
 
 <div class="container pt-2">
 
@@ -99,7 +99,7 @@
   
 </div>
 
-<script src="${pageContext.servletContext.contextPath}/js/new_sale.js" type="text/javascript"></script>
+<script src="resources/js/new_sale.js" type="text/javascript"></script>
 
 </body>
 </html>

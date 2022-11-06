@@ -4,7 +4,7 @@
     Author     : najera
 --%>
 
-<%@include file="../template/menu.jsp" %>
+<%@include file="../../template/menu.jsp" %>
 
 <div class="row text-center mb-1 pt-4">
     <div class="col-md-12">
@@ -23,4 +23,4 @@
 --%>
      
 </body>
-</html>
+</html>  
