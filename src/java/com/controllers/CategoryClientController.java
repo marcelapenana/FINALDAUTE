@@ -36,12 +36,12 @@ public class CategoryClientController extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
-            String categoria = request.getParameter("txtCategoria");            
+            String categoria = request.getParameter("txtCategoria");
 
             CategoryClient cat = new CategoryClient(codigo, categoria);
             CategoryClientDAO catDAO = new CategoryClientDAO();
-            String mensaje="";
-          
+            String mensaje = "";
+
             if (request.getParameter("btnAgregar") != null) {
                 int res = catDAO.insertarC(cat);
                 mensaje = (res != 0) ? "CATEGORIA INSERTADA" : "ERROR AL INSERTAR";
@@ -58,11 +58,11 @@ public class CategoryClientController extends HttpServlet {
             request.setAttribute("mensaje", mensaje);
 
             request.getRequestDispatcher("views/categoryClient.jsp").forward(request, response);
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CategoryClientController</title>");            
+            out.println("<title>Servlet CategoryClientController</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet CategoryClientController at " + request.getContextPath() + "</h1>");
@@ -70,8 +70,8 @@ public class CategoryClientController extends HttpServlet {
             out.println("</html>");
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -109,5 +109,4 @@ public class CategoryClientController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }

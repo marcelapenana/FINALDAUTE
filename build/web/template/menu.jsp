@@ -31,7 +31,11 @@
         <!-- Google Charts -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
     </head>
+<<<<<<< HEAD
     <body> 
+=======
+    <body>
+>>>>>>> 59b52186d128f857dff74922fde74d1b361cf4cf
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -51,15 +55,32 @@
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categorias</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Clientes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blogpage.jsp">Blog</a>
+=======
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/sales/new_sale.jsp">Nueva venta</a>
+                    </li>                                                                 
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Rol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categoria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
+>>>>>>> 59b52186d128f857dff74922fde74d1b361cf4cf
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Roles</a>
                     </li>
                     
@@ -78,6 +99,13 @@
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/NewSaleController">Nueva Venta</a>
                         </div>  
                     </li>    
+=======
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Cliente</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Auto</a>
+                    </li>
+>>>>>>> 59b52186d128f857dff74922fde74d1b361cf4cf
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
@@ -85,11 +113,22 @@
                            aria-haspopup="true" aria-expanded="false">
                             Otros
                         </a>
+<<<<<<< HEAD
                         <div class="dropdown-menu" 
                              aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Marcas.jsp">Marcas</a>
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Catalogo.jsp">Catalogo</a>
                         </div>
+=======
+                        <form class="dropdown-menu" 
+                              aria-labelledby="navbarDropdownMenuLink"
+                              action="AuthController" method="POST">
+                            <button name="btnLogOut" class="dropdown-item" type="submit">
+                            </button>
+
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/catalogo.jsp">Catalogo</a>
+                        </form>
+>>>>>>> 59b52186d128f857dff74922fde74d1b361cf4cf
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
