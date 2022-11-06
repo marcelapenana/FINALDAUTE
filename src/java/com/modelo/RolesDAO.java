@@ -14,76 +14,78 @@ import java.util.ArrayList;
  *
  * @author najera
  */
-public class RolesDAO extends Conexion{
-    public int insertarR(RolesC r){
-        int res=0;
+public class RolesDAO extends Conexion {
+
+    public int insertarR(RolesC c) {
+        int res = 0;
         try {
             this.conectar();
-            String mysql=("insert into roles(rol_type) values (?)");
-            PreparedStatement pre= this.getCon().prepareStatement(mysql);
-            pre.setString(1, r.getRolType());
-        } catch (Exception e) {
-            System.out.println("Error al insertar"+ e.getMessage());
-        }finally{
-        this.desconectar();
-        }       
-        return res;
-    }
-    
-    
-    public ArrayList<RolesC> mostrarR(){
-    ArrayList<RolesC> listaR=new ArrayList<>();
-        try {
-            this.conectar();
-            String mysql=("SELECT * FROM roles");
-            PreparedStatement pre=this.getCon().prepareStatement(mysql);
-            ResultSet rs=pre.executeQuery();
-            while(rs.next()){
-               RolesC r= new RolesC();
-               r.setIdRol(rs.getInt(1));
-               r.setRolType(rs.getString(2));
-               listaR.add(r);
-            }
-            
-        } catch (Exception e) {
-            System.out.println("Error al mostrar"+ e.getMessage());
-        }finally{
+            String sql = "insert into roles(rol_type) values (?)";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
+            pre.setString(1, c.getRolType());
+            res = pre.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Error al insertar" + e.getMessage());
+        } finally {
             this.desconectar();
         }
-    return listaR;
-    } 
-    
-    public int modificarR(RolesC r){
-    int res=0; 
+        return res;
+    }
+
+    public ArrayList<RolesC> mostrarR() {
+        ArrayList<RolesC> listaR = new ArrayList<>();
         try {
             this.conectar();
-            String mysql=("UPDATE roles SET rol_type=? WHERE rol_id=?");
-            PreparedStatement pre= this.getCon().prepareStatement(mysql);
+            String mysql = ("SELECT * FROM roles");
+            PreparedStatement pre = this.getCon().prepareStatement(mysql);
+            ResultSet rs = pre.executeQuery();
+            while (rs.next()) {
+                RolesC r = new RolesC();
+                r.setIdRol(rs.getInt(1));
+                r.setRolType(rs.getString(2));
+                listaR.add(r);
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error al mostrar" + e.getMessage());
+        } finally {
+            this.desconectar();
+        }
+        return listaR;
+    }
+
+    public int modificarR(RolesC r) {
+        int res = 0;
+        try {
+            this.conectar();
+            String mysql = ("UPDATE roles SET rol_type=? WHERE rol_id=?");
+            PreparedStatement pre = this.getCon().prepareStatement(mysql);
             pre.setString(1, r.getRolType());
             pre.setInt(2, r.getIdRol());
-            res=pre.executeUpdate();
-           
+            res = pre.executeUpdate();
+
         } catch (Exception e) {
-            System.out.println("Error al modificar"+e.getMessage());
-        }finally{
-        this.desconectar();
+            System.out.println("Error al modificar" + e.getMessage());
+        } finally {
+            this.desconectar();
         }
-    
-    return res;
+
+        return res;
     }
-    
-       public int eliminarR(RolesC r){
+
+    public int eliminarR(RolesC r) {
         int res = 0;
         try {
             this.conectar();
             String sql = "DELETE FROM roles WHERE rol_id=?";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             pre.setInt(1, r.getIdRol());
-                     
+
             res = pre.executeUpdate();
-        }catch(SQLException e){
-            System.out.println("Error al eliminar"+e.getMessage());
-        } 
+        } catch (SQLException e) {
+            System.out.println("Error al eliminar" + e.getMessage());
+        }
         return res;
     }
 }

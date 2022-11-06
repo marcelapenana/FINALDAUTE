@@ -79,9 +79,9 @@
                                 <input type="text" name="txtNombre" id="txtNombre" class="form-control">    
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-outline-dark" data-dismiss="modal">Cerrar</button>
-                                <button class="btn btn-outline-primary" name="btnAgregar" id="btnAgregar">Agregar</button>
-                                <button class="btn btn-outline-success" name="btnEditar" id="btnEditar">Editar</button>
+                                <button class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
+                                <button class="btn btn-outline-success" name="btnAgregar" id="btnAgregar">Agregar</button>
+                                <button class="btn btn-outline-primary" name="btnEditar" id="btnEditar">Editar</button>
                                 <button class="btn btn-outline-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
                             </div>
                         </form>

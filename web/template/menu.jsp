@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
-       <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" 
                     data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
@@ -42,19 +42,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Rol</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categoria</a>
                     </li>
-                     <li class="nav-item">
-                       <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
                     </li>
-                      <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
                     </li> 
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Cliente</a>
                     </li> 
                     <li class="nav-item">
@@ -72,7 +72,7 @@
                               action="AuthController" method="POST">
                             <button name="btnLogOut" class="dropdown-item" type="submit">
                             </button>
-                            
+
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/catalogo.jsp">Catalogo</a>
                         </form>
                     </li>

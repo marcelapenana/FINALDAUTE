@@ -36,38 +36,34 @@ public class Roles extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
-           String nombre =request.getParameter("txtNombre");
-           
-                               
-           RolesC r =new RolesC(codigo, nombre);
-           RolesDAO rDAO=new RolesDAO();
-           
-            String mensaje="";
-            
-            
-            
-            if (request.getParameter("btnAgregar")!=null) {
-                int res= rDAO.insertarR(r);
-                mensaje=(res!=0)?"ROL INSERTADO":"ERROR AL INSERTAR";
+            String nombre = request.getParameter("txtNombre");
+
+            RolesC r = new RolesC(codigo, nombre);
+            RolesDAO rDAO = new RolesDAO();
+
+            String mensaje = "";
+
+            if (request.getParameter("btnAgregar") != null) {
+                int res = rDAO.insertarR(r);
+                mensaje = (res != 0) ? "ROL INSERTADO" : "ERROR AL INSERTAR";
             }
-            if (request.getParameter("btnEliminar")!=null) {
-                int res= rDAO.eliminarR(r);
-                mensaje=(res!=0)?"ROL ELIMINADO":"Error al eliminar";
+            if (request.getParameter("btnEliminar") != null) {
+                int res = rDAO.eliminarR(r);
+                mensaje = (res != 0) ? "ROL ELIMINADO" : "ERROR AL ELIMINAR";
             }
-            if (request.getParameter("btnEditar")!=null) {
-                int res= rDAO.modificarR(r);
-                mensaje=(res!=0)?"ROL MODIFICADO":"Error al modificar";
+            if (request.getParameter("btnEditar") != null) {
+                int res = rDAO.modificarR(r);
+                mensaje = (res != 0) ? "ROL MODIFICADO" : "ERROR AL MODIFICAR";
             }
-            
-            
+
             request.setAttribute("mensaje", mensaje);
-                      
-            request.getRequestDispatcher("views/roles.jsp").forward(request, response); 
-            
+
+            request.getRequestDispatcher("views/roles.jsp").forward(request, response);
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Roles</title>");            
+            out.println("<title>Servlet Roles</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Roles at " + request.getContextPath() + "</h1>");
@@ -75,8 +71,8 @@ public class Roles extends HttpServlet {
             out.println("</html>");
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -114,5 +110,4 @@ public class Roles extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }
