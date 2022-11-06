@@ -28,7 +28,7 @@ public class Conexion {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/daute_project",
-                    "root", "root");
+                    "root", "");
             if (!con.equals(null)) {
                 System.out.println("Conectado");
             }
