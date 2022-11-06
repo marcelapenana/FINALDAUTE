@@ -20,7 +20,7 @@
         <%@include file="../template/menu.jsp" %>
 
         <div class="container mt-4">       
-            <hr>                      
+                            
             <div class="row text-center mt-4">
                 <div class="col-12 table-responsive-sm">
                     <table class="table table-info table-striped">

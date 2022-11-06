@@ -49,13 +49,13 @@
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">B</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">U</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Roles</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Rol</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Autos</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Auto</a>
                     </li>
                     
 
