@@ -1,0 +1,153 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 04-Nov-2022, 19:48:20
+    Author     : Luis   
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: -moz-linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,33,50,1) 26%, rgba(16,103,253,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,33,50,1) 26%, rgba(16,103,253,1) 100%);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,33,50,1) 26%, rgba(16,103,253,1) 100%);
+    background: rgb(2,0,36);
+    color: #fff;
+}
+
+.login-container {
+    display: grid;
+    grid-template-rows: 8 1fr;
+    color: #fff;
+    background: #63498C;
+}
+
+.login-container div {
+    margin: 0 auto;
+}
+
+.login-container div > div {
+    margin: 1rem auto;
+}
+
+.login__title {
+    grid-row: 1;
+    margin-bottom: 2rem !important;
+}
+
+.login__user {
+    grid-row: 2;
+}
+
+.login__pass {
+    grid-row: 3;
+}
+
+.login__error {
+    grid-row: 6;
+}
+
+.login__send {
+    grid-row: 7;
+}
+
+.login_back {
+    grid-row: 8;
+}
+
+.login__title-txt {
+    font-size: 1.75rem;
+}
+
+input {
+    margin: .9rem 0;
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+    background: none;
+    color: #fff;
+    width: 90%;
+}
+
+label {
+    display: block;
+    margin: .9rem 0 2px 0;
+}
+
+.login__user-input,
+.login__pass_input {
+    height: 25px;
+    border: 2px solid rgb(2,0,36);
+    border-radius: 50px;
+}
+
+input:first-child:focus,
+input:nth-child(2):focus {
+    box-shadow: 1px 1px 7px 1px rgb(2,0,36);
+}
+
+.login__error_label {
+    display: block;
+    color: red;
+}
+
+.login__send-btn {
+    color: #fff;
+    background: rgb(2,0,36);
+    cursor: pointer;
+    height: 35px;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.login__send-btn:hover,
+.login__send-btn:focus {
+    box-shadow: 1px 1px 10px 1px #458;
+    transition: transform .6s;
+}
+
+.login__back_btn {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    height: 28px;
+    width: 100%;
+    border: 2px solid rgb(2,0,36);
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.login__back_btn:hover, .login__back_btn:focus {
+    box-shadow: 1px 1px 7px 1px #458;
+    border: 2px solid transparent;
+    background: rgb(2,0,36);
+    transition: 3s;
+}
+
+.login__back_btn p {
+    display: block;
+    margin-top: .3rem;
+    font-size: 13px;
+}
+
+@media (min-width: 992px) {
+    .login-container {
+        width: 40vw;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px 5px #222;  
+        margin: 5vh auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .login-container {
+        width: 100vw;
+    }
+}
