@@ -4,6 +4,8 @@
  */
 package com.controllers;
 
+import com.modelo.SaleTicketDAO;
+import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,24 +16,20 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Luis
  */
+
+@WebServlet(name = "SalesController", urlPatterns = {"/SalesController"})
 public class SalesController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        SaleTicketDAO dao = new SaleTicketDAO();
         
-        String btnSave = request.getParameter("btnSave");
-        
-        if (btnSave != null) {
-            
-            
-        } else {
-            
-            
-        }
+        request.setAttribute("sales", dao.showAllSales());
+        request.getRequestDispatcher("views/sales/sales.jsp").forward(request, response);
     }
 
-    
-    
+         
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

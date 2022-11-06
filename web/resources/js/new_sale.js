@@ -11,14 +11,15 @@ jQuery(() => {
     if (sessionStorage.cart) {
         products = JSON.parse(sessionStorage.cart);
         sale = JSON.parse(sessionStorage.sale);
+        console.log(products);
         let table = "";
         products.map((cart) => {
             table += `<tr class="tr">
-                        <td>${cart.code}</td>
-                        <td>${cart.name}</td>
-                        <td>${cart.price}</td>
-                        <td>${cart.qty}</td>
-                        <td>${cart.subTotalProd}</td>
+                        <td>${cart[0]}</td>
+                        <td>${cart[1]}</td>
+                        <td>${cart[2]}</td>
+                        <td>${cart[3]}</td>
+                        <td>${cart[4]}</td>
                         <td><button id="btnRemove" onClick="deleteProductCart(${i})" 
                             class="btn btn-sm btn-danger"><i class="bi-trash3"> 
                             <span> Quitar</span></i></button></td>
@@ -46,25 +47,25 @@ $("#searchCar-form").submit((e) => {
         url: `NewSaleController?carCode=${code}`,
         method: "GET",
         success: (res) => {
+            res = res.split('-');
             console.log(res);
-            res = JSON.parse(res);
             try {
+                cleanLabels();
                 qty = parseInt(qty);
-                let subTotalProd = res.price * qty;
+                let subTotalProd = res[2] * qty;
                 let productCart = res;
-                productCart.qty = qty;
-                productCart.subTotalProd = subTotalProd;
-                productCart.isRemoved = 0;
-                products.push(productCart);
+                productCart[3] = qty;
+                productCart[4] = subTotalProd;
+                productCart[5] = 0;
                 items += qty;
                 subTotal += subTotalProd;
                 total = subTotal;
                 let table = `<tr class="tr">
                                                 <td>${code}</td>
-                                                <td>${productCart.name}</td>
-                                                <td>${productCart.price}</td>
-                                                <td>${productCart.qty}</td>
-                                                <td>${productCart.subTotalProd}</td>
+                                                <td>${productCart[1]}</td>
+                                                <td>${productCart[2]}</td>
+                                                <td>${productCart[3]}</td>
+                                                <td>${productCart[4]}</td>
                                                 <td><button id="btnRemove" onClick="deleteProductCart(${i})" class="btn btn-sm btn-danger"><i class="bi-trash3"> <span> Quitar</span></i></button></td>
                                             </tr>`;
                 $("#items").text(items);
@@ -74,6 +75,7 @@ $("#searchCar-form").submit((e) => {
                 $("#cart").append(table);
                 $("#txtCode").val("");
                 $("#qty").val(1);
+                products.push(productCart);
                 sale = {items, subTotal, total};
                 sessionStorage.cart = JSON.stringify(products);
                 sessionStorage.sale = JSON.stringify(sale);
@@ -118,6 +120,7 @@ const cleanDisplay = () => {
     $("#txtCode").val("");
     $("#qty").val(1);
     $(".tr").remove();
+    
     sessionStorage.clear();
 };
 
@@ -169,27 +172,25 @@ $("#myForm").submit((e) => {
     e.preventDefault();
     if (products.length < 1)
         return;
-    method = $("#cmbMethod").val();
+    
     saveSale();
 });
 
 const saveSale = () => {
+    console.log(products);
     $.ajax({
         url: $("#myForm").attr("action"),
         method: $("#myForm").attr("method"),
         data: {
-            cart: products,
-            sale: {
-                items,
-                subTotal,
-                total,
-                method,
-                customer,
-            },
+            'cars[]': products,
+            items,
+            subTotal,
+            total,
+            customer,
         },
         success: (res) => {
-            res = JSON.parse(res);
-            if (res[1] > 0) {
+            console.log(res);
+            if (res > 0) {
                 showSuccessAlert("Venta Realizada con éxito");
                 cleanDisplay();
             } else

@@ -67,6 +67,35 @@ public class ModelsDAO extends Conexion{
         }
         return lista;
     }
+    
+    //Hecho por otro
+    public Models getByCode(String code) {
+        Models m = new Models();
+        try {
+            this.conectar();
+            String sql = "SELECT *FROM models mo INNER JOIN brands br ON "
+                    + "mo.mod_brand_id=br.bra_id where mod_code = ?";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
+            pre.setString(1, code);
+            ResultSet rs;
+            rs = pre.executeQuery();
+            while (rs.next()) {
+                m.setModId(rs.getInt(1));
+                m.setModCode(rs.getString(2) );
+                m.setModName(rs.getString(3));
+                m.setModYear(rs.getString(4));
+                m.setModPrice(rs.getDouble(5));
+                m.setModColor(rs.getString(6));
+                m.setModBrandid(rs.getInt(7));
+                m.setModBraname(rs.getString(9));
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al mostrar vehiculos" + e.getMessage());
+        } finally {
+            this.desconectar();
+        }
+        return m;
+    }
 
     public int modificarModels(Models m) {
         int res = 0;

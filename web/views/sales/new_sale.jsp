@@ -1,9 +1,11 @@
 <%-- 
-    Document   : new_sale
-    Created on : 6 nov. 2022, 14:58:43
-    Author     : najera
---%>
+    Document   : new_sale      
+    Created on : 07-Oct-2022, 08:52:31
+    Author     : Luis   
+--%> 
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="../../template/auth.jsp" %>
 <%@include file="../../template/menu.jsp" %>
 
 <div class="container pt-2">
@@ -30,7 +32,7 @@
             <hr>
             <div class="row" style="margin: auto 0;">
                 <div class="col-md-12 col-lg-6 div-group">
-                    <label>Código: </label>
+                    <label>CÃ³digo: </label>
                     <input type="text" maxlength="15" id="txtCode" class="form-control">
                 </div>
 
@@ -50,7 +52,7 @@
         <div class="col-md-12 col-lg-3 ml-lg-1 card cart">
             <h5>Esta Venta</h5>
             <hr>
-            <form method="POST" id="myForm" action="NewSaleController" accept-charset="utf-8">
+            <form method="POST" id="myForm" action="${pageContext.servletContext.contextPath}/NewSaleController?save=true" accept-charset="utf-8">
                 <button id="submit" type="submit" class="btn btn-sm btn-outline-success">Facturar</button>
                 <button onclick="cancelSale()" type="button" class="btn btn-sm btn-outline-danger">Cancelar</button>
                 <button onclick="newSale()" type="button" class="btn btn-sm btn-outline-primary">Nueva</button>
@@ -80,7 +82,7 @@
                 <table class="table table-info table-striped">
                     <thead>
                         <tr>
-                            <th>Código</th>
+                            <th>CÃ³digo</th>
                             <th>Nombre</th>
                             <th>Precio</th>
                             <th>Cantidad</th>
@@ -99,7 +101,9 @@
   
 </div>
 
-<script src="resources/js/new_sale.js" type="text/javascript"></script>
+<script src="${pageContext.servletContext.contextPath}/resources/js/main.js" type="text/javascript"></script>
+<script src="${pageContext.servletContext.contextPath}/resources/js/new_sale.js" type="text/javascript"></script>
+
 
 </body>
-</html>
+</html>   

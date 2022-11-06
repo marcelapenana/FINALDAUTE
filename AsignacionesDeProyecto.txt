@@ -1,0 +1,15 @@
+Marcela callate
+
+
+1	Clientes =========== ESTEBAN
+2	Categoria clientes = MARCE
+3	Marcas ============= PAMELA
+4	Autos ============== BRYAN
+5	Usuarios =========== MARCE
+6	Blog =============== ESTEBAN
+7	Ventas ============= LUIS
+8	Detalle venta ====== LUIS
+9	Ingreso ============ BRYAN
+10  	Catálogo =========== PAMELA
+11  	Rol ================ MARCE
+12  	Método pago ======== PAMELA
