@@ -14,69 +14,75 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>AUTO</title>
     </head>
     <body>
-         <%!
+        <%!
             BrandsDAO brandsDAO = new BrandsDAO();
             ModelsDAO modelsDAO = new ModelsDAO();
         %>
-         <%@include file="../template/menu.jsp" %>
+        <%@include file="../template/menu.jsp" %>
         <div class="container mt-4">
-            <h1>Autos</h1>
-            <hr>
-            <!-- Botón para agregar -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mdlFormulario">
-                Agregar Autos
-            </button>
+            <div class="row mt-4">
+                <div class="col-12 table-responsive-sm">
+                    <div class="text-center">
+                        <table class="table table-info table-striped">
+                            <tr>
+                                <th scope="col">AUTO</th>                       
+                            </tr>
+                        </table>
+                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#mdlFormulario">
+                            NUEVO AUTO
+                        </button>
+                    </div>
 
-            <!-- Tabla -->
-            <table class="table mt-4">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Código</th>
-                        <th scope="col">Modelo</th>
-                        <th scope="col">Años</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Color</th>
-                        <th scope="col">Marca</th>
-                        <th scope="col">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <%
-                        ArrayList<Models> listaModels = modelsDAO.mostrarModels();
-                        for (Models elem : listaModels) {
-                    %>
-                    <tr>
-                        <td><%=elem.getModId()%></td>
-                        <td><%=elem.getModCode()%></td>
-                        <td><%=elem.getModName()%></td>
-                        <td><%=elem.getModYear()%></td>
-                        <td><%=elem.getModPrice()%></td>
-                        <td><%=elem.getModColor()%></td>
-                        <td><%=elem.getModBraname()%></td>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <%
-                        }
-                    %>
+                    <hr>
+                    <table class="table table-sm table-hover table-info table-bordered table-striped">
+                        <thead class=" table-danger text-center">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Código</th>
+                                <th scope="col">Modelo</th>
+                                <th scope="col">Años</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                                ArrayList<Models> listaModels = modelsDAO.mostrarModels();
+                                for (Models elem : listaModels) {
+                            %>
+                            <tr>
+                                <td><%=elem.getModId()%></td>
+                                <td><%=elem.getModCode()%></td>
+                                <td><%=elem.getModName()%></td>
+                                <td><%=elem.getModYear()%></td>
+                                <td><%=elem.getModPrice()%></td>
+                                <td><%=elem.getModColor()%></td>
+                                <td><%=elem.getModBraname()%></td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
+                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
+                                    </div>
+                                </td>
+                            </tr> 
+                            <% }%>
+                        </tbody>
+                    </table> 
+                </div> 
+            </div>                         
+            ${msg}
 
-                </tbody>
-            </table>
-
-            <!-- Modal para agregar-->
+            <!-- MODAL -->
             <div class="modal fade" id="mdlFormulario">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Autos</h5>
+                            <h5 class="modal-title">NUEVO CLIENTE</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -108,10 +114,9 @@
                                 </select>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                <button class="btn btn-primary" name="btnAgregar" id="btnAgregar">Agregar</button>
-                                <button class="btn btn-success" name="btnEditar" id="btnEditar">Editar</button>
-                                <button class="btn btn-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
+                                <button class="btn btn-outline-success" name="btnAgregar" id="btnAgregar">Agregar</button>
+                                <button class="btn btn-outline-primary" name="btnEditar" id="btnEditar">Editar</button>
+                                <button class="btn btn-outline-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
                             </div>
                         </form>
                     </div>
@@ -125,7 +130,7 @@
         <%
             }
         %>
-        
+
     </body>
     <script src="${pageContext.servletContext.contextPath}/js/models.js"></script>
 </html>
