@@ -51,43 +51,27 @@
                             SRVD | Home <span class="sr-only">(current)</span></a>
                         <!-- Sistema para registrar ventas del dia-->
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categorias</a>
-                    </li>
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blogpage.jsp">Blog</a>
-
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/sales/new_sale.jsp">Nueva venta</a>
-                    </li>                                                                 
-                    <li class="nav-item">
+                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Rol</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categoria</a>
-                    </li>
-                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categorias</a>
+                    </li>      
+                      <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
 
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>                      
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>
-                    </li>
-                    <li class="nav-item">
 
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Roles</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Carros</a>
-                    </li>
-
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Clientes</a>
+                    </li>                                                                                                                                                                                                                      
+                   
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
                            id="navbarDropdownMenuLink" data-toggle="dropdown" 
@@ -97,38 +81,12 @@
                              aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/SalesController">Ventas</a>
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/NewSaleController">Nueva Venta</a>
-                        </div>  
-                    </li>    
-
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Cliente</a>
-                    </li> 
+                        </div>                       
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Auto</a>
                     </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" 
-                           id="navbarDropdownMenuLink" data-toggle="dropdown" 
-                           aria-haspopup="true" aria-expanded="false">
-                            Otros
-                        </a>
-
-                        <div class="dropdown-menu" 
-                             aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Marcas.jsp">Marcas</a>
-                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Catalogo.jsp">Catalogo</a>
-                        </div>
-
-                        <form class="dropdown-menu" 
-                              aria-labelledby="navbarDropdownMenuLink"
-                              action="AuthController" method="POST">
-                            <button name="btnLogOut" class="dropdown-item" type="submit">
-                            </button>
-
-                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/catalogo.jsp">Catalogo</a>
-                        </form>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/catalogo.jsp">Catalogo</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
