@@ -52,7 +52,7 @@
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">U</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">R</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Roles</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Autos</a>

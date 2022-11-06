@@ -3,13 +3,12 @@
     Created on : 6 nov. 2022, 13:09:04
     Author     : najera
 --%>
-
+<%@page import="com.modelo.CategoryClient"%>
+<%@page import="com.modelo.CategoryClientDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <%@page import="com.modelo.CategoryClient"%>
-    <%@page import="com.modelo.CategoryClientDAO"%>
-    <%@page import="java.util.ArrayList"%>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CATEGORIA</title>
@@ -99,5 +98,5 @@
 
 
     </body>
-    <script src="${pageContext.servletContext.contextPath}/js/categoryClient.js"></script>
+   <script src="${pageContext.servletContext.contextPath}/js/categoryClient.js"></script>
 </html>
