@@ -20,11 +20,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta charset="UTF-8" >
         <script src="${pageContext.servletContext.contextPath}/resources/js/jquery-3.6.1.min.js" type="text/javascript"></script>
-        <link href="${pageContext.servletContext.contextPath}/resources/css/login.css" rel="stylesheet"> 
+        <link href="${pageContext.servletContext.contextPath}/resources/css/login.css" rel="stylesheet">   
     </head>
     <body>
+
         <form class="login-container" method="POST" 
               action="${pageContext.servletContext.contextPath}/AuthController">
 
@@ -55,5 +56,6 @@
         </form>    
 
         <script src="resources/js/auth.js" type="text/javascript"></script>
-    </body>
-</html>
+
+    </body>     
+</html> 
