@@ -110,4 +110,31 @@ public class ClienteDAO extends Conexion{
         }
         return res;
     }
+    
+    public Cliente getClientByDUI(String dui) {
+        Cliente cl = new Cliente();
+        try {   
+            this.conectar();
+            String sql = "SELECT cli_dui FROM clients WHERE cli_dui = ?";
+            PreparedStatement pre = this.getCon().prepareStatement(sql);
+            pre.setString(1, dui);
+            ResultSet rs = pre.executeQuery();
+            while (rs.next()) {
+                //cl.setCli_id(rs.getInt(1));
+                //c.setCli_name(rs.getString(2));
+                //c.setCli_date_birth(rs.getString(3));
+                cl.setCli_dui(rs.getString(1));
+                //c.setCli_residence(rs.getString(5));
+                //c.setCli_telephone(rs.getString(6));
+                //c.setCli_category_id(rs.getInt(7));
+                //c.setCat_type(rs.getString(9));
+
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al mostrar el registro por DUI: " + e.getMessage());
+        } finally {
+            this.desconectar();
+        }
+        return cl;
+    }  
 }

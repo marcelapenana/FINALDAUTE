@@ -95,5 +95,9 @@ public class Models {
     public void setModBraname(String modBraname) {
         this.modBraname = modBraname;
     }
-    
+
+    @Override
+    public String toString() {
+        return  modCode + "-" + modName + "-" + modPrice;
+    }
 }

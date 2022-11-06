@@ -1,7 +1,7 @@
 <%-- 
-    Document   : login_registrer
-    Created on : 6 nov. 2022, 11:20:24
-    Author     : najera
+    Document   : login_register     
+    Created on : 07-Oct-2022, 08:52:31
+    Author     : Luis   
 --%>
 <%@page session="true" %>
 <%
@@ -20,11 +20,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta charset="UTF-8" >
         <script src="${pageContext.servletContext.contextPath}/resources/js/jquery-3.6.1.min.js" type="text/javascript"></script>
-        <link href="${pageContext.servletContext.contextPath}/resources/css/login.css" rel="stylesheet"> 
+        <link href="${pageContext.servletContext.contextPath}/resources/css/login.css" rel="stylesheet">   
     </head>
     <body>
+
         <form class="login-container" method="POST" 
               action="${pageContext.servletContext.contextPath}/AuthController">
 
@@ -51,9 +52,15 @@
                     <input name="btnLogin" type="submit" class="login__send-btn" 
                            value="Iniciar sesión">
                 </div>
+                
+                <div class="login__back">
+                    <a href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp" class="login__back_btn">
+                        <p>Volver al blog</p></a>
+                </div>
             </div>
         </form>    
 
         <script src="resources/js/auth.js" type="text/javascript"></script>
-    </body>
-</html>
+
+    </body>     
+</html>   
