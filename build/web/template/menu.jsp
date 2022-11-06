@@ -46,7 +46,7 @@
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Cliente</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp"></a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
@@ -70,8 +70,8 @@
                               action="AuthController" method="POST">
                             <button name="btnLogOut" class="dropdown-item" type="submit">
                             </button>
-                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Marcas.jsp">b</a>
-                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Catalogo.jsp">C</a>
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/catalogo.jsp">Catalogo</a>
                         </form>
                     </li>
                     <li class="nav-item dropdown">

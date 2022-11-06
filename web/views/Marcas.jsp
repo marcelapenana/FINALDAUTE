@@ -21,20 +21,26 @@
     %>
     <%@include file="../template/menu.jsp" %>
     <div class="container mt-4">
-        <h1>Marcas</h1>
-        <hr>
+        <div class="row text-center mt-4">
+                <div class="col-12 table-responsive-sm"> 
+         <table class="table table-info table-striped">
+                        <tr>
+                            <th scope="col">MARCAS</th>                       
+                        </tr>
+                    </table>
         <!-- Botón para agregar -->
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#mdlFormulario">
-            Agregar Carro-Marca
+        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#mdlFormulario">
+        NUEVA MARCA
         </button>
-
+        <br>
+         <hr>
         <!-- Tabla -->
-        <table class="table mt-4"  table-responsive-sm>
-            <thead class="thead-dark">
+        <table class="table table-sm table-hover table-info table-bordered table-striped">
+                        <thead class=" table-danger text-center">
                 <tr>
-                    <th scope="col">Id Marca</th>
-                    <th scope="col">Nombre Marca</th>
-              
+                    <th scope="col">CODIGO</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">ACCIONES</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,13 +50,13 @@
                 <tr>
 
 
-                    <td><%=elem.getBraName()%></td>
+                    <td><%=elem.getBraID()%></td>
                     <td><%=elem.getBraName()%></td>
                     
                     <td>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
+                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
+                            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
                         </div>
                     </td>
                 </tr>    
@@ -60,6 +66,8 @@
 
             </tbody>
         </table>
+                </div>
+        </div>
 
         <!-- Modal para agregar-->
         <div class="modal fade" id="mdlFormulario">
@@ -85,9 +93,9 @@
                         </div>
                         <div class="modal-footer">
 
-                            <button class="btn btn-warning" name="btnAgregar" id="btnAgregar">Agregar</button>     
-                            <button class="btn btn-danger" name="btnModificar" id="btnModificar">Modificar</button>
-                            <button class="btn btn-secondary" name="btnEliminar" id="btnEliminar">Eliminar</button>
+                            <button class="btn btn-outline-info" name="btnAgregar" id="btnAgregar">Agregar</button>     
+                            <button class="btn btn-outline-success" name="btnModificar" id="btnModificar">Modificar</button>
+                            <button class="btn btn-outline-danger" name="btnEliminar" id="btnEliminar">Eliminar</button>
                         </div>
                     </form>
                 </div>
