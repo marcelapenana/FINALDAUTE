@@ -34,7 +34,7 @@
                         <!-- Sistema para registrar ventas del dia-->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/SalesController">V</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/new_sale">Venta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/NewSaleController">N</a>
