@@ -61,7 +61,7 @@ public class BrandsControllers extends HttpServlet {
                 mensaje = (res!=0)?"modelo eliminado con exito" : "Error al eliminar  modelo";
             }
             request.setAttribute("mensaje",mensaje);
-            request.getRequestDispatcher("views/Marcas.jsp").forward(request, response);
+            request.getRequestDispatcher("views/marcas.jsp").forward(request, response);
             
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");

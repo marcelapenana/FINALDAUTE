@@ -38,26 +38,28 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/sales/new_sale.jsp">Nueva venta</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categoria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Cliente</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
-                    </li>
+                    </li>                                                                 
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Rol</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categoria</a>
+                    </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
+                    </li> 
+                     <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Cliente</a>
+                    </li> 
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Auto</a>
                     </li>
-                    
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
@@ -70,7 +72,7 @@
                               action="AuthController" method="POST">
                             <button name="btnLogOut" class="dropdown-item" type="submit">
                             </button>
-                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
+                            
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/catalogo.jsp">Catalogo</a>
                         </form>
                     </li>

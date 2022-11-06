@@ -85,11 +85,6 @@
                             <input type="text" name="txtCodigo" id="txtCodigo" class="form-control" value="0" readonly >
                             Nombre Modelo
                             <input type="text" name="txtNombre" id="txtNombre" class="form-control"  placeholder="Nombre Modelo.."> 
-                           
-                            </select>
-                          
-
-
                         </div>
                         <div class="modal-footer">
 
