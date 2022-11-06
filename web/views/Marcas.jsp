@@ -44,7 +44,7 @@
                 </tr>
             </thead>
             <tbody>
-                <%       ArrayList<Brands> listaBrands = brandsDAO.mostrarBrands();
+                <%       ArrayList<Brands> listaBrands = brandsDAO.mostrarB();
                     for (Brands  elem : listaBrands) {
                 %>
                 <tr>

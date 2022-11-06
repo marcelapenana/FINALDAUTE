@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * @author najera
  */
 public class BrandsDAO extends Conexion{
-      public int insertarBrands(Brands b) {
+      public int insertarB(Brands b) {
         int res = 0;
         try {
             this.conectar();
@@ -35,11 +35,11 @@ public class BrandsDAO extends Conexion{
 
     }
 
-    public ArrayList<Brands> mostrarBrands() {
+    public ArrayList<Brands> mostrarB() {
         ArrayList<Brands> lista = new ArrayList<>();
         try { 
             this.conectar();
-            String sql = "SELECT *FROM brands ";
+            String sql = "SELECT * FROM brands";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             ResultSet rs;
             rs = pre.executeQuery();
@@ -60,11 +60,11 @@ public class BrandsDAO extends Conexion{
     }
 
 
-    public int modificarBrands(Brands b) {
+    public int modificarB(Brands b) {
         int res = 0;
         try {
             this.conectar();
-            String sql = "UPDATE cliente SET bra_name=? WHERE bra_id=?";
+            String sql = "UPDATE brands SET bra_name=? WHERE bra_id=?";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             
           pre.setString(1,b.getBraName());
@@ -81,7 +81,7 @@ public class BrandsDAO extends Conexion{
 
     }
 
-    public int eliminarCliente(Brands b) {
+    public int eliminarB(Brands b) {
         int res = 0;
         try {
             this.conectar();
