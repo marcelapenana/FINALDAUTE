@@ -72,7 +72,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/cars/cars.jsp">Carros</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Autos</a>
                     </li>
                     <li class="nav-item">
 

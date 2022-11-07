@@ -24,7 +24,7 @@ function llenarFormulario(fila) {
     $('#txtNombre').val(nombre);
     $('#txtAnio').val(anio);
     $('#txtPrecio').val(precio);
-    $('#txtColor').val(color);
+    $('#sMarColors option:contains(' + color + ')').attr('selected', true);
     $('#sMarcas option:contains(' + marcas + ')').attr('selected', true);
 }
 
@@ -45,5 +45,5 @@ $(function () {
     });
 
 
-}); 
+});
 

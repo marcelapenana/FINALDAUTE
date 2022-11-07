@@ -9,16 +9,18 @@ package com.modelo;
  * @author najera
  */
 public class Brands {
-     private int braID;
+
+    private int braID;
     private String braName;
 
     public Brands() {
     }
 
-    public Brands(int braID, String braName) {
+    public Brands(int braID, String braName, String mensaje) {
         this.braID = braID;
         this.braName = braName;
     }
+    
 
     public int getBraID() {
         return braID;
@@ -35,4 +37,5 @@ public class Brands {
     public void setBraName(String braName) {
         this.braName = braName;
     }
+
 }

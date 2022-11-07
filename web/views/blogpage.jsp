@@ -109,16 +109,9 @@
                             <!--Fecha actual del post-->
                             <input type="text" name="nowdate" id="nowdate" class="form-control" readonly hidden required>
                             Autor
-                            <select class="form-select form-control" id="sCodeUser" name="sCodeUser" required>
-                                <%
-                                    ArrayList<UsersC> listaUsers = usersDAO.mostrarU();
-                                    for (UsersC elem : listaUsers) {
-                                %>
-                                <option value="<%=elem.getUseId()%>"><%=elem.getUseRealName()%> </option>
-                                <%
-                                    }
-                                %>
-                            </select>
+                            <input type="text" name="txtAutor" id="txtAutor" class="form-control" value="" placeholder="${user}" required readonly>
+                            <!-- Insertar el value que tiene el usuario ^ -->
+                            
                             <hr>
                             <p class="text-danger font-weight-light text-md-center"><b>¡¡IMPORTANTE!!</b><br>
                                 Una vez publiques en el blog, no podras editarlo ni eliminarlo. 

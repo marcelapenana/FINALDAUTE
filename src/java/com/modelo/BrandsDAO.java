@@ -14,16 +14,16 @@ import java.util.ArrayList;
  *
  * @author najera
  */
-public class BrandsDAO extends Conexion{
-      public int insertarB(Brands b) {
+public class BrandsDAO extends Conexion {
+
+    public int insertarB(Brands b) {
         int res = 0;
         try {
             this.conectar();
-            
-            String sql = "INSERT INTO  brands(bra_name) VALUES(?)";
+            String sql = "INSERT INTO brands(bra_name) VALUES(?)";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
-            pre.setString(1,b.getBraName());
-            
+            pre.setString(1, b.getBraName());
+
             res = pre.executeUpdate();
         } catch (SQLException e) {
             System.out.println("ERROR AL insertar DATOS " + e.getMessage());
@@ -37,7 +37,7 @@ public class BrandsDAO extends Conexion{
 
     public ArrayList<Brands> mostrarB() {
         ArrayList<Brands> lista = new ArrayList<>();
-        try { 
+        try {
             this.conectar();
             String sql = "SELECT * FROM brands";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
@@ -59,17 +59,15 @@ public class BrandsDAO extends Conexion{
         return lista;
     }
 
-
     public int modificarB(Brands b) {
         int res = 0;
         try {
             this.conectar();
             String sql = "UPDATE brands SET bra_name=? WHERE bra_id=?";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
-            
-          pre.setString(1,b.getBraName());
-          pre.setInt(2,b.getBraID());
-           
+
+            pre.setString(1, b.getBraName());
+            pre.setInt(2, b.getBraID());
 
             res = pre.executeUpdate();
         } catch (SQLException e) {

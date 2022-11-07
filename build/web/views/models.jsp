@@ -14,9 +14,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>AUTO</title>
+        <title>AUTOS</title>
     </head>
     <body>
+        <style>
+            #cursiva {
+                color: #b9bbbe;
+            }
+        </style>
         <%!
             BrandsDAO brandsDAO = new BrandsDAO();
             ModelsDAO modelsDAO = new ModelsDAO();
@@ -28,7 +33,7 @@
                     <div class="text-center">
                         <table class="table table-info table-striped">
                             <tr>
-                                <th scope="col">AUTO</th>                       
+                                <th scope="col">AUTOS</th>                       
                             </tr>
                         </table>
                         <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#mdlFormulario">
@@ -41,18 +46,17 @@
                         <thead class=" table-danger text-center">
                             <tr>
                                 <th scope="col">ID</th>
-                                <th scope="col">Código</th>
-                                <th scope="col">Modelo</th>
-                                <th scope="col">Años</th>
+                                <th scope="col">Código (VIN)</th>
+                                <th scope="col">Nombre Modelo</th>
+                                <th scope="col">Año</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Color</th>
                                 <th scope="col">Marca</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <%
-                                ArrayList<Models> listaModels = modelsDAO.mostrarModels();
+                        <tbody class="text-center">
+                            <%                                ArrayList<Models> listaModels = modelsDAO.mostrarModels();
                                 for (Models elem : listaModels) {
                             %>
                             <tr>
@@ -74,7 +78,7 @@
                         </tbody>
                     </table> 
                 </div> 
-            </div>                         
+            </div>
             ${msg}
 
             <!-- MODAL -->
@@ -82,7 +86,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">NUEVO CLIENTE</h5>
+                            <h5 class="modal-title">NUEVO MODELO / VEHICULO</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -91,18 +95,30 @@
                             <div class="modal-body">
                                 ID
                                 <input type="text" name="txtCodigo" id="txtCodigo" class="form-control" value="0" readonly>
-                                Código
-                                <input type="text" name="txtCodName" id="txtCodName" class="form-control" >
-                                Nombre
-                                <input type="text" name="txtNombre" id="txtNombre" class="form-control">
-                                Año
-                                <input type="text" name="txtAnio" id="txtAnio" class="form-control">
-                                Precio
-                                <input type="number" name="txtPrecio" id="txtPrecio" class="form-control">
-                                Color
-                                <input type="text" name="txtColor" id="txtColor" class="form-control">
-                                Marcas
-                                <select name="sMarcas" class="form-control" id="sMarcas">                                    
+                                Código (VIN)
+                                <input type="text" name="txtCodName" id="txtCodName" class="form-control" required minlength="15" maxlength="15" placeholder="EST3B4N41V4R3NG4">
+                                Nombre Modelo
+                                <input type="text" name="txtNombre" id="txtNombre" class="form-control" required minlength="1" maxlength="50" placeholder="Picanto EX">
+                                Año del Modelo
+                                <input type="text" name="txtAnio" id="txtAnio" class="form-control" required minlength="4" maxlength="4" placeholder="2022">
+                                Precio Unitario <i id="cursiva">(ingresar sin signo $).</i>
+                                <input type="text" name="txtPrecio" id="txtPrecio" class="form-control" required minlength="4" maxlength="7" placeholder="20.000" pattern="[0-9.]+">
+                                Color del Vehiculo
+                                <select name="sMarColors" class="form-control" id="sMarColors" required>
+                                    <option value="BLANCO">BLANCO</option>
+                                    <option value="NEGRO">NEGRO</option>
+                                    <option value="GRIS">GRIS</option>
+                                    <option value="AZUL">AZUL</option>
+                                    <option value="ROJO">ROJO</option>
+                                    <option value="VERDE">VERDE</option>
+                                    <option value="ROSADO">ROSADO</option>
+                                    <option value="CELESTE">CELESTE</option>
+                                    <option value="ANARANJADO">ANARANJADO</option>
+                                    <option value="CAFE">CAFE</option>
+                                    <option value="BEIGE">BEIGE</option>
+                                </select>
+                                Marca del Vehículo
+                                <select name="sMarcas" class="form-control" id="sMarcas" required>
                                     <%
                                         ArrayList<Brands> listaBrands = brandsDAO.mostrarB();
                                         for (Brands elem : listaBrands) {

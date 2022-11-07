@@ -11,70 +11,69 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Marcas</title>
     </head>
-     <%!
-   
-
+    <%!
         BrandsDAO brandsDAO = new BrandsDAO();
 
     %>
     <%@include file="../template/menu.jsp" %>
     <div class="container mt-4">
         <div class="row text-center mt-4">
-                <div class="col-12 table-responsive-sm"> 
-         <table class="table table-info table-striped">
+            <div class="col-12 table-responsive-sm"> 
+                <table class="table table-info table-striped">
+                    <tr>
+                        <th scope="col">MARCAS</th>                       
+                    </tr>
+                </table>
+                <!-- Botón para agregar -->
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#mdlFormulario">
+                    NUEVA MARCA
+                </button>
+                <br>
+                <hr>
+                <!-- Tabla -->
+                <table class="table table-sm table-hover table-info table-bordered table-striped">
+                    <thead class=" table-danger text-center">
                         <tr>
-                            <th scope="col">MARCAS</th>                       
+                            <th scope="col">CODIGO</th>
+                            <th scope="col">MARCA</th>
+                            <th scope="col">ACCIONES</th>
                         </tr>
-                    </table>
-        <!-- Botón para agregar -->
-        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#mdlFormulario">
-        NUEVA MARCA
-        </button>
-        <br>
-         <hr>
-        <!-- Tabla -->
-        <table class="table table-sm table-hover table-info table-bordered table-striped">
-                        <thead class=" table-danger text-center">
-                <tr>
-                    <th scope="col">CODIGO</th>
-                    <th scope="col">NOMBRE</th>
-                    <th scope="col">ACCIONES</th>
-                </tr>
-            </thead>
-            <tbody>
-                <%       ArrayList<Brands> listaBrands = brandsDAO.mostrarB();
-                    for (Brands  elem : listaBrands) {
-                %>
-                <tr>
+                    </thead>
+                    <tbody>
+                        <%       ArrayList<Brands> listaBrands = brandsDAO.mostrarB();
+                            for (Brands elem : listaBrands) {
+                        %>
+                        <tr>
 
 
-                    <td><%=elem.getBraID()%></td>
-                    <td><%=elem.getBraName()%></td>
-                    
-                    <td>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
-                            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
-                        </div>
-                    </td>
-                </tr>    
-                <%
-                    }
-                %>
+                            <td><%=elem.getBraID()%></td>
+                            <td><%=elem.getBraName()%></td>
 
-            </tbody>
-        </table>
-                </div>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
+                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>    
+                        <%
+                            }
+                        %>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
+        ${msg}
 
         <!-- Modal para agregar-->
         <div class="modal fade" id="mdlFormulario">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Modelo</h5>
+                        <h5 class="modal-title">MARCAS</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -83,8 +82,8 @@
                         <div class="modal-body">
                             Código
                             <input type="text" name="txtCodigo" id="txtCodigo" class="form-control" value="0" readonly >
-                            Nombre Modelo
-                            <input type="text" name="txtNombre" id="txtNombre" class="form-control"  placeholder="Nombre Modelo.."> 
+                            Nombre Marca
+                            <input type="text" name="txtNombre" id="txtNombre" class="form-control"  placeholder="Nombre de la Marca" required minlength="1" title="Marca">
                         </div>
                         <div class="modal-footer">
 
@@ -106,5 +105,5 @@
         }
     %>
     <script src="${pageContext.servletContext.contextPath}/js/marcas.js"></script>
-    </body>
+</body>
 </html>

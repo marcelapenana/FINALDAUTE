@@ -34,45 +34,34 @@ public class ModelController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            
-            
+
             int modId = Integer.parseInt(request.getParameter("txtCodigo"));
             String modCode = request.getParameter("txtCodName");
             String modName = request.getParameter("txtNombre");
             String modYear = request.getParameter("txtAnio");
             double modPrice = Double.parseDouble(request.getParameter("txtPrecio"));
-            String modColor = request.getParameter("txtColor");
+            String modColor = request.getParameter("sMarColors");
             int modBrandid = Integer.parseInt(request.getParameter("sMarcas"));
-            
+
             Models m = new Models(modId, modCode, modName, modYear, modPrice, modColor, modBrandid, "");
             ModelsDAO modelsDAO = new ModelsDAO();
-            
+
             int res = 0;
             String mensaje = "";
             // Botones para realizar crud
             if (request.getParameter("btnAgregar") != null) {
                 res = modelsDAO.insertarModels(m);
-                mensaje = (res != 0) ? "Auto Insertado " : "Error al insertar";
+                mensaje = (res != 0) ? "Modelo Insertado " : "Error al insertar";
             } else if (request.getParameter("btnEditar") != null) {
                 res = modelsDAO.modificarModels(m);
-                mensaje = (res != 0) ? "Auto modificado " : "Error al modificar";
+                mensaje = (res != 0) ? "Modelo modificado " : "Error al modificar";
             } else if (request.getParameter("btnEliminar") != null) {
                 res = modelsDAO.eliminarModels(m);
-                mensaje = (res != 0) ? "Auto eliminado" : "Error al eliminar";
+                mensaje = (res != 0) ? "Modelo eliminado" : "Error al eliminar";
             }
             request.setAttribute("mensaje", mensaje);
             request.getRequestDispatcher("views/models.jsp").forward(request, response);
-                       
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ModelController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ModelController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+
         }
     }
 
