@@ -49,7 +49,7 @@ $("#searchCar-form").submit((e) => {
         success: (res) => {
             res = res.split('-');
             console.log(res);
-            try {
+            if (res[0] !== 'null') {
                 cleanLabels();
                 qty = parseInt(qty);
                 let subTotalProd = res[2] * qty;
@@ -79,7 +79,7 @@ $("#searchCar-form").submit((e) => {
                 sale = {items, subTotal, total};
                 sessionStorage.cart = JSON.stringify(products);
                 sessionStorage.sale = JSON.stringify(sale);
-            } catch (e) {
+            } else {
                 showErrorAlert("Auto no Disponible o código mal escrito");
             }
         },
@@ -193,6 +193,7 @@ const saveSale = () => {
             if (res > 0) {
                 showSuccessAlert("Venta Realizada con éxito");
                 cleanDisplay();
+                cleanLabels();
             } else
                 showErrorAlert("Error al realizar la venta");
         },

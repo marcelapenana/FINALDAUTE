@@ -32,17 +32,21 @@
             <div class="row mt-4">
                 <div class="col-12 table-responsive-sm">                    
                     <table>
+                         <%
+                        if (user != null) {                                  
+                         %>
                         <thead class="text-center">
                             <tr>
                                 <th scope="col">
                                     <div class="text-left">
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#mdlFormulario">
+                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#mdlFormulario">
                                             NUEVO POST
                                         </button>
                                     </div>
                                 </th>
                             </tr>
                         </thead>
+                         <%}%>
                         <tbody>
                             <%                                ArrayList<Blog> listaBlogs = blogDAO.mostrarBlogs();
                                 for (Blog data : listaBlogs) {
@@ -109,7 +113,7 @@
                             <!--Fecha actual del post-->
                             <input type="text" name="nowdate" id="nowdate" class="form-control" readonly hidden required>
                             Autor
-                            <input type="text" name="txtAutor" id="txtAutor" class="form-control" value="" placeholder="${user}" required readonly>
+                            <input type="text" name="txtAutor" id="txtAutor" class="form-control" value="${user}" placeholder="" required readonly>
                             <!-- Insertar el value que tiene el usuario ^ -->
                             
                             <hr>

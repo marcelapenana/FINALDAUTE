@@ -34,15 +34,15 @@ public class BlogsController extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-             
+           
             // VARIABLES
             int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
             String header = request.getParameter("txtHeader");
             String parrafo = request.getParameter("txtParrafo");
             String datetime = request.getParameter("nowdate");
-            int codigoUsuario = Integer.parseInt(request.getParameter("sCodeUser"));
+            String codigoUsuario = request.getParameter("sCodeUser");
             String mensaje = "";
-
+               
             // INSTANCIAS
             Blog bg = new Blog(codigo, header, parrafo, datetime, codigoUsuario, mensaje);
             BlogDAO bgDAO = new BlogDAO();
@@ -61,7 +61,7 @@ public class BlogsController extends HttpServlet {
 
             // MENSAJE Y RESPUESTA
             request.setAttribute("mensaje", mensaje);
-            request.getRequestDispatcher("views/blog/blogpage.jsp").forward(request, response);
+            request.getRequestDispatcher("views/blogpage.jsp").forward(request, response);
             
         }
     }

@@ -30,12 +30,12 @@ CREATE TABLE users (
 );
 
 CREATE TABLE blog (
-	blo_id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    blo_id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     blo_header TEXT(100) NOT NULL,
     blo_paragraph TEXT(500) NOT NULL,
     blo_publish_date DATETIME NOT NULL,
-    blo_user_id INTEGER(10) NOT NULL,
-    FOREIGN KEY (blo_user_id) REFERENCES users(use_id)
+    blo_user_name VARCHAR(25) NOT NULL,
+    FOREIGN KEY (blo_user_name) REFERENCES users(use_username)
 );
 
 CREATE TABLE clients (

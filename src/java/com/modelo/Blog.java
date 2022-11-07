@@ -13,13 +13,13 @@ public class Blog {
     private String blo_header;
     private String blo_paragraph;
     private String blo_publish_date;
-    private int blo_user_id;
+    private String blo_user_id;
     private String use_real_nameOT;
 
     public Blog() {
     }
 
-    public Blog(int blo_id, String blo_header, String blo_paragraph, String blo_publish_date, int blo_user_id, String use_real_nameOT) {
+    public Blog(int blo_id, String blo_header, String blo_paragraph, String blo_publish_date, String blo_user_id, String use_real_nameOT) {
         this.blo_id = blo_id;
         this.blo_header = blo_header;
         this.blo_paragraph = blo_paragraph;
@@ -60,11 +60,11 @@ public class Blog {
         this.blo_publish_date = blo_publish_date;
     }
 
-    public int getBlo_user_id() {
+    public String getBlo_user_id() {
         return blo_user_id;
     }
 
-    public void setBlo_user_id(int blo_user_id) {
+    public void setBlo_user_id(String blo_user_id) {
         this.blo_user_id = blo_user_id;
     }
 

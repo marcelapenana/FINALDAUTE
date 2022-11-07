@@ -3,7 +3,7 @@
     Created on : 6 nov. 2022, 13:58:12
     Author     : najera
 --%>
-
+<%@include file="../template/auth.jsp" %>
 <%@page import="com.modelo.RolesDAO"%>
 <%@page import="com.modelo.RolesC"%>
 <%@page import="java.util.ArrayList"%>
@@ -27,22 +27,18 @@
         <div class="container mt-4">                                   
             <div class="row text-center mt-4">
                 <div class="col-12 table-responsive-sm">
-                    <table class="table table-info table-striped">
-                        <tr>
-                            <th scope="col">USUARIO</th>                       
-                        </tr>
-                    </table>
-                    <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#mdlFormulario">
-                        NUEVA USUARIO
-                    </button>
+                     <h2><strong>USUARIO</strong></h2>
+                       <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#mdlFormulario">
+                            NUEVO USUARIO
+                        </button>
                     <hr>
-                    <table class="table table-sm table-hover table-info table-bordered table-striped">
+                    <table class="table table-sm table-hover table-light table-bordered table-striped">
                         <thead class=" table-danger text-center">    
                             <tr>
                                 <th scope="col">CÓDIGO</th>
                                 <th scope="col">NOMBRE</th>
                                 <th scope="col">USUARIO</th>
-                                <th scope="col">CONTRASEÑA</th>
+                                
                                 <th scope="col">ROL</th>                     
                                 <th scope="col">ACCIONES</th>
                             </tr>
@@ -56,12 +52,12 @@
                                 <td><%=elem.getUseId()%></td>
                                 <td><%=elem.getUseRealName()%></td>   
                                 <td><%=elem.getUserName()%></td>
-                                <td><%=elem.getPassword()%></td>
+                                
                                 <td><%=elem.getRolId()%></td>                      
                                 <td>
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
-                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="editar"><i class="fa-solid fa-pencil"></i></button>
+                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="eliminar"><i class="fa-solid fa-trash-can"></i></button>
                                     </div>
                                 </td>
                             </tr> 

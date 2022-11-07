@@ -67,10 +67,12 @@
                     File file = new File(application.getRealPath("reportes/reporte1.jasper"));
                     byte[] bytes = JasperRunManager.runReportToPdf(file.getPath(), parametros, con.getCon());
 
+                    response.reset();
                     ServletOutputStream output = response.getOutputStream();
                     response.setContentType("application/pdf");
                     response.setContentLength(bytes.length);
-
+ 
+                    
                     output.write(bytes);
                     output.flush();
                     output.close();

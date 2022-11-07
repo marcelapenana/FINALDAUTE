@@ -3,7 +3,7 @@
     Created on : 6 nov. 2022, 14:46:28
     Author     : najera
 --%>
-
+<%@include file="../template/auth.jsp" %>
 <%@page import="com.modelo.Brands"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.modelo.BrandsDAO"%>
@@ -13,32 +13,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Marcas</title>
-    </head>
-<<<<<<< HEAD
-    <%!
-=======
+    </head> 
      <%!
->>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
         BrandsDAO brandsDAO = new BrandsDAO();
-
     %>
     <%@include file="../template/menu.jsp" %>
     <div class="container mt-4">
         <div class="row text-center mt-4">
             <div class="col-12 table-responsive-sm"> 
-                <table class="table table-info table-striped">
-                    <tr>
-                        <th scope="col">MARCAS</th>                       
-                    </tr>
-                </table>
+                 <h2><strong>MARCA</strong></h2>
                 <!-- Botón para agregar -->
-                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#mdlFormulario">
-                    NUEVA MARCA
-                </button>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#mdlFormulario">
+                            NUEVA MARCA
+                        </button>
                 <br>
                 <hr>
                 <!-- Tabla -->
-                <table class="table table-sm table-hover table-info table-bordered table-striped">
+                <table class="table table-sm table-hover table-light table-bordered table-striped">
                     <thead class=" table-danger text-center">
                         <tr>
                             <th scope="col">CODIGO</th>
@@ -58,8 +49,8 @@
 
                             <td>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
-                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
+                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#mdlFormulario" id="editar"><i class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#mdlFormulario" id="eliminar"><i class="fa-solid fa-trash-can"></i></button>
                                 </div>
                             </td>
                         </tr>    

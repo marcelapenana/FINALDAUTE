@@ -30,6 +30,23 @@
         <link href="${pageContext.servletContext.contextPath}/resources/css/menu.css" rel="stylesheet" >
         <!-- Google Charts -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        
+        <style>
+        body {
+           background: #654ea3;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        
+        </style>
     </head>
     <body> 
 
@@ -37,7 +54,7 @@
     <body> 
 
     <body>
-
+        
 
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -46,6 +63,9 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+           
+            
+            
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -53,7 +73,12 @@
                            href="${pageContext.servletContext.contextPath}/index.jsp">
                             SRVD | Home <span class="sr-only">(current)</span></a>
                         <!-- Sistema para registrar ventas del dia-->
+    
                     </li>
+                    
+            <%
+            if (user != null) {                                  
+            %>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Clientes</a>
                     </li>
@@ -75,10 +100,7 @@
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Autos</a>
 
                     </li>
-                      <li class="nav-item">
-                        
-
-                    </li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
                            id="navbarDropdownMenuLink" data-toggle="dropdown" 
@@ -116,7 +138,7 @@
                         <div class="dropdown-menu" 
                              aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Marcas.jsp">Marcas</a>
-                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Catalogo.jsp">Catalogo</a>
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/views/Catalogo/Catalogo.jsp">Catalogo</a>
                         </div>
 
                         <li class="nav-item dropdown">
@@ -133,7 +155,19 @@
                         </form>
                     </li>
                         </div>                                          
-                    
+             
+                              
+            <%
+            }else{         
+            %>
+            
+             <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">INICIAR SESION</a>
+             </li>
+            <%}%>
+            
                 </ul>
             </div>
-        </nav>  
+        </nav> 
+                            
+                            

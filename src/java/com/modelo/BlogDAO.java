@@ -21,12 +21,12 @@ public class BlogDAO extends Conexion {
         int res = 0;
         try {
             this.conectar();
-            String sql = "INSERT INTO blog(blo_header, blo_paragraph, blo_publish_date, blo_user_id) values(?,?,?,?)";
+            String sql = "INSERT INTO blog(blo_header, blo_paragraph, blo_publish_date, blo_user_name) values(?,?,?,?)";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             pre.setString(1, b.getBlo_header());
             pre.setString(2, b.getBlo_paragraph());
             pre.setString(3, b.getBlo_publish_date());
-            pre.setInt(4, b.getBlo_user_id());
+            pre.setString(4, b.getBlo_user_id());
 
             res = pre.executeUpdate();
 
@@ -53,7 +53,7 @@ public class BlogDAO extends Conexion {
                 b.setBlo_header(rs.getString(2));
                 b.setBlo_paragraph(rs.getString(3));
                 b.setBlo_publish_date(rs.getString(4));
-                b.setBlo_user_id(rs.getInt(5));
+                b.setBlo_user_id(rs.getString(5));
                 b.setUse_real_nameOT(rs.getString(7));
                 listaBlogs.add(b);
             }

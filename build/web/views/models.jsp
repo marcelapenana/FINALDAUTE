@@ -3,7 +3,7 @@
     Created on : 6 nov. 2022, 11:51:24
     Author     : najera
 --%>
-
+<%@include file="../template/auth.jsp" %>
 <%@page import="com.modelo.Models"%>
 <%@page import="com.modelo.Brands"%>
 <%@page import="java.util.ArrayList"%>
@@ -31,18 +31,14 @@
             <div class="row mt-4">
                 <div class="col-12 table-responsive-sm">
                     <div class="text-center">
-                        <table class="table table-info table-striped">
-                            <tr>
-                                <th scope="col">AUTOS</th>                       
-                            </tr>
-                        </table>
-                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#mdlFormulario">
+                         <h2><strong>AUTOS</strong></h2>
+                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#mdlFormulario">
                             NUEVO AUTO
                         </button>
                     </div>
 
                     <hr>
-                    <table class="table table-sm table-hover table-info table-bordered table-striped">
+                    <table class="table table-sm table-hover table-light table-bordered table-striped">
                         <thead class=" table-danger text-center">
                             <tr>
                                 <th scope="col">ID</th>
@@ -69,8 +65,8 @@
                                 <td><%=elem.getModBraname()%></td>
                                 <td>
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="editar">Editar</button>
-                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="eliminar">Eliminar</button>
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="editar"><i class="fa-solid fa-pencil"></button>
+                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#mdlFormulario" id="eliminar"><i class="fa-solid fa-trash-can"></i></button>
                                     </div>
                                 </td>
                             </tr> 

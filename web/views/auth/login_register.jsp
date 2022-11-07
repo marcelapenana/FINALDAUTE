@@ -54,7 +54,7 @@
                 </div>
                 
                 <div class="login__back">
-                    <a href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp" class="login__back_btn">
+                    <a href="${pageContext.servletContext.contextPath}/views/blogpage.jsp" class="login__back_btn">
                         <p>Volver al blog</p></a>
                 </div>
             </div>
