@@ -63,8 +63,4 @@
         <script src="resources/js/auth.js" type="text/javascript"></script>
 
     </body>     
-<<<<<<<< HEAD:web/views/auth/login_register.jsp
-</html>   
-========
-</html> 
->>>>>>>> 59b52186d128f857dff74922fde74d1b361cf4cf:web/views/auth/login_registrer.jsp
+</html>

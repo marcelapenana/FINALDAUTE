@@ -70,7 +70,7 @@ public class SaleTicketDAO extends Conexion {
 
         try {
             this.conectar();
-            String sql = "select sum(sal_total) as Ganancias, sal_date_sale as Fecha\n"
+            String sql = "select sum(sal_total) as sal_total, sal_date_sale\n"
                     + "from sale_ticket\n"
                     + "where sal_date_sale <= curdate()\n"
                     + "group by sal_date_sale;";
@@ -79,9 +79,10 @@ public class SaleTicketDAO extends Conexion {
 
             while (rs.next()) {
                 SaleTicket saleTicket = new SaleTicket();
-
+                
                 saleTicket.setSalTotal(rs.getDouble(1));
                 saleTicket.setDateSale(rs.getString(2));
+                
 
                 saleTickets.add(saleTicket);
             }
