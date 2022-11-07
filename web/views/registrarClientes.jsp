@@ -26,7 +26,7 @@
             <div class="row mt-6">
                 <div class="col-12 table-responsive-sm">
                     <div class="text-center">
-                         <table class="table table-info ">
+                         <table class="table table-info table-striped">
                         <tr>
                             <th scope="col">CLIENTE</th>                       
                         </tr>
@@ -37,7 +37,7 @@
                     </div>
 
                     <hr>
-                    <table class="table table-sm table-hover table-info table-bordered">
+                    <table class="table table-sm table-hover table-info table-bordered table-striped">
                         <thead class=" table-danger text-center"> 
                             <tr>
                                 <th scope="col">CÓDIGO</th>

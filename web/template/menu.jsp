@@ -72,13 +72,30 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/cars/cars.jsp">Carros</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Autos</a>
                     </li>
-                                                                                                                                                                                                                                                          
+                      <li class="nav-item">
+                        
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
                            id="navbarDropdownMenuLink" data-toggle="dropdown" 
-                           aria-haspopup="true" aria-expanded="false"> Ventas
+                           aria-haspopup="true" aria-expanded="false"> Reportes
+                        </a>
+                        <div class="dropdown-menu" 
+                             aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportesn/reporte2.jsp">Ventas realizadas a cada cliente</a>
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportesn/reporte4.jsp">Ventas totales diarias</a>
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportesn/reporte5.jsp">Ventas totales a a la fecha</a>
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/reporte1.jsp">Autos filtrados por marca</a>
+                            <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/reportes/reporte3.jsp">Clientes filtrados por categoria</a>
+                              
+                        </div>  
+                    </li>                                                                                                                                                                                                                                      
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" 
+                           id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                           aria-haspopup="true" aria-expanded="false"> ventas
                         </a>
                         <div class="dropdown-menu" 
                              aria-labelledby="navbarDropdownMenuLink">
@@ -87,8 +104,7 @@
 
                             <a class="dropdown-item" href="${pageContext.servletContext.contextPath}/DashBoardController">Ventas por dia</a>
                         </div>  
-                    </li>    
-
+                    </li>                                         
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 
                            id="navbarDropdownMenuLink" data-toggle="dropdown" 

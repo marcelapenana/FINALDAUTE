@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
  */
-
 $('body').on('click', '#editar', function () {
     llenarFormulario($(this).closest('tr'));
 });
@@ -24,7 +23,7 @@ function llenarFormulario(fila) {
     $('#txtNombre').val(nombre);
     $('#txtAnio').val(anio);
     $('#txtPrecio').val(precio);
-    $('#txtColor').val(color);
+    $('#sMarColors option:contains(' + color + ')').attr('selected', true);
     $('#sMarcas option:contains(' + marcas + ')').attr('selected', true);
 }
 
@@ -45,5 +44,6 @@ $(function () {
     });
 
 
-}); 
+});
+
 

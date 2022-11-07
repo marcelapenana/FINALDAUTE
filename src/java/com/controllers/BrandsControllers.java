@@ -35,13 +35,13 @@ public class BrandsControllers extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             
-             int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
+            int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
             String nombre = request.getParameter("txtNombre");
-
-            Brands cat = new Brands(codigo, nombre);
-            BrandsDAO catDAO = new BrandsDAO();
             String mensaje = "";
-
+            
+            Brands cat = new Brands(codigo, nombre, mensaje);
+            BrandsDAO catDAO = new BrandsDAO();
+            
             if (request.getParameter("btnAgregar") != null) {
                 int res = catDAO.insertarB(cat);
                 mensaje = (res != 0) ? "MARCA INSERTADA" : "ERROR AL INSERTAR";
@@ -50,14 +50,14 @@ public class BrandsControllers extends HttpServlet {
                 int res = catDAO.eliminarB(cat);
                 mensaje = (res != 0) ? "MARCA ELIMINADA" : "ERROR AL ELIMINAR";
             }
-            if (request.getParameter("btnEditar") != null) {
+            if (request.getParameter("btnModificar") != null) {
                 int res = catDAO.modificarB(cat);
                 mensaje = (res != 0) ? "MARCA MODIFICADA" : "ERROR AL MODIFICAR ";
             }
 
             request.setAttribute("mensaje", mensaje);
 
-            request.getRequestDispatcher("views/marcas.jsp").forward(request, response);
+            request.getRequestDispatcher("views/Marcas.jsp").forward(request, response);
 
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");

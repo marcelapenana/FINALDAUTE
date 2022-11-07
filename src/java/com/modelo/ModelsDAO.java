@@ -31,7 +31,7 @@ public class ModelsDAO extends Conexion{
 
             res = pre.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Error al insertar" + e.getMessage());
+            System.out.println("Error al insertar: " + e.getMessage());
         } finally {
             this.desconectar();
         }
