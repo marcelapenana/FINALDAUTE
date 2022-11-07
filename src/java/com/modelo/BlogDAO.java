@@ -100,5 +100,4 @@ public class BlogDAO extends Conexion {
         }
         return res;
     }
-
 }

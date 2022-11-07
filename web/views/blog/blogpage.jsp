@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/resources/css/blogstyles.css"/>
         <title>Clientes</title>
     </head>
-    <body>
+     <body>
         <%@include file="../../template/menu.jsp" %>
         <%!
             UsersDAO usersDAO = new UsersDAO();

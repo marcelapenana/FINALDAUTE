@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
  */
-
 $('body').on('click', '#editar', function () {
     llenarFormulario($(this).closest('tr'));
 });
@@ -46,4 +45,8 @@ $(function () {
 
 
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
 

@@ -9,7 +9,10 @@ package com.modelo;
  * @author najera
  */
 public class Brands {
+<<<<<<< HEAD
 
+=======
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
     private int braID;
     private String braName;
 

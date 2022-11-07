@@ -35,9 +35,7 @@ public class Users extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             
-            
-            
-             int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
+           int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
            String nombre =request.getParameter("txtNombre");
            String usuario =request.getParameter("txtUsuario");
            String pass =request.getParameter("txtContra");
@@ -51,24 +49,23 @@ public class Users extends HttpServlet {
             
             
             
-             if (request.getParameter("btnAgregar")!=null) {
-                int res= userDAO.insertarU(user);
-                mensaje=(res!=0)?"USUARIO INSERTADO":"Error al insertar";
+            if (request.getParameter("btnAgregar") != null) {
+                int res = userDAO.insertarU(user);
+                mensaje = (res != 0) ? "USUARIO INSERTADO" : "ERROR AL INSERTAR";
             }
             if (request.getParameter("btnEliminar")!=null) {
                 int res= userDAO.eliminarU(user);
-                mensaje=(res!=0)?"USUARIO ELIMINAR":"Error al eliminar";
+                mensaje=(res!=0)?"USUARIO ELIMINAR":"ERROR AL ELIMINAR";
             }
             if (request.getParameter("btnEditar")!=null) {
                 int res= userDAO.modificarU(user);
-                mensaje=(res!=0)?"USUARIO MODIFICADO":"Error al modificar";
+                mensaje=(res!=0)?"USUARIO MODIFICADO":"ERROR AL MODIFICAR";
             }
                                
           
             request.setAttribute("mensaje", mensaje);
                       
             request.getRequestDispatcher("views/users.jsp").forward(request, response); 
-            
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");

@@ -34,6 +34,7 @@ public class BlogsController extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
+             
             // VARIABLES
             int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
             String header = request.getParameter("txtHeader");

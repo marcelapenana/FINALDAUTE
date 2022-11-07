@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/resources/css/blogstyles.css"/>
         <title>Blog</title>
     </head>
-    <body>
+   <body>
         <%@include file="../template/menu.jsp" %>
         <%!
             UsersDAO usersDAO = new UsersDAO();
@@ -148,6 +148,7 @@
         document.getElementById("nowdate").value = resultados;
     </script>
 </body>
+     
 <!-- <script src="{pageContext.servletContext.contextPath}/js/blogActions.js"></script> -->
 
 </html>

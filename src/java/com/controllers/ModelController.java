@@ -61,7 +61,20 @@ public class ModelController extends HttpServlet {
             }
             request.setAttribute("mensaje", mensaje);
             request.getRequestDispatcher("views/models.jsp").forward(request, response);
+<<<<<<< HEAD
 
+=======
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ModelController</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ModelController at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
         }
     }
 

@@ -13,7 +13,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Marcas</title>
     </head>
+<<<<<<< HEAD
     <%!
+=======
+     <%!
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
         BrandsDAO brandsDAO = new BrandsDAO();
 
     %>
