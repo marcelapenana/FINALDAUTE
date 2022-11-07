@@ -63,10 +63,4 @@
         <script src="resources/js/auth.js" type="text/javascript"></script>
 
     </body>     
-<<<<<<< HEAD
 </html>
-=======
-
-</html> 
-
->>>>>>> 0117390dad961823441e42dc3cbc4c102c3713fd

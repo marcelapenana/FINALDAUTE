@@ -54,27 +54,15 @@
                             SRVD | Home <span class="sr-only">(current)</span></a>
                         <!-- Sistema para registrar ventas del dia-->
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categorias</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/registrarClientes.jsp">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/clients/registrarClientes.jsp">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>
-
-                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/roles.jsp">Rol</a>
+                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blogpage.jsp">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/categoryClient.jsp">Categorias</a>
                     </li>      
-                      <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/marcas.jsp">Marcas</a>
-
-
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/users.jsp">Usuario</a>
                     </li>
@@ -86,10 +74,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/cars/cars.jsp">Carros</a>
                     </li>
-
-                     <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/blog/blogpage.jsp">Blog</a>                      
-                    </li> 
                     <li class="nav-item">
 
 
