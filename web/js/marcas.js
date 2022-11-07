@@ -17,6 +17,13 @@ $('body').on('click', '#eliminar', function () {
 function llenarFormulario(fila) {
     var codigo = $(fila).children('td:eq(0)').html();
     var nombre = $(fila).children('td:eq(1)').html();
+<<<<<<< HEAD
+
+    $('#txtCodigo').val(codigo);
+    $('#txtNombre').val(nombre);
+}
+=======
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
 
     $('#txtCodigo').val(codigo);
     $('#txtNombre').val(nombre);

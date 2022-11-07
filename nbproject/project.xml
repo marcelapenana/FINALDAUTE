@@ -13,10 +13,13 @@
                 </library>
                 <library dirs="200">
                     <file>${libs.MySQL.classpath}</file>
+<<<<<<< HEAD
+=======
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
                     <file>${libs.JasperReport.classpath}</file>
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>

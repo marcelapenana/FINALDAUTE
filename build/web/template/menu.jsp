@@ -73,9 +73,12 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" href="${pageContext.servletContext.contextPath}/views/models.jsp">Autos</a>
+<<<<<<< HEAD
+=======
                     </li>
                       <li class="nav-item">
                         
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" 

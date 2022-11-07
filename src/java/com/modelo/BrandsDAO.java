@@ -14,8 +14,14 @@ import java.util.ArrayList;
  *
  * @author najera
  */
+<<<<<<< HEAD
+public class BrandsDAO extends Conexion {
+
+    public int insertarB(Brands b) {
+=======
 public class BrandsDAO extends Conexion{
        public int insertarB(Brands b) {
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
         int res = 0;
         try {
             this.conectar();

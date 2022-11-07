@@ -34,7 +34,11 @@ public class BrandsControllers extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
+<<<<<<< HEAD
+
+=======
             
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
             int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
             String nombre = request.getParameter("txtNombre");
             String mensaje = "";
@@ -58,6 +62,8 @@ public class BrandsControllers extends HttpServlet {
             request.setAttribute("mensaje", mensaje);
 
             request.getRequestDispatcher("views/Marcas.jsp").forward(request, response);
+<<<<<<< HEAD
+=======
 
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -69,6 +75,7 @@ public class BrandsControllers extends HttpServlet {
             out.println("<h1>Servlet BrandsControllers at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
         }
     }
 

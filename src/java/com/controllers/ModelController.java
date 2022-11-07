@@ -34,8 +34,7 @@ public class ModelController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            
-            
+
             int modId = Integer.parseInt(request.getParameter("txtCodigo"));
             String modCode = request.getParameter("txtCodName");
             String modName = request.getParameter("txtNombre");
@@ -62,6 +61,9 @@ public class ModelController extends HttpServlet {
             }
             request.setAttribute("mensaje", mensaje);
             request.getRequestDispatcher("views/models.jsp").forward(request, response);
+<<<<<<< HEAD
+
+=======
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -72,6 +74,7 @@ public class ModelController extends HttpServlet {
             out.println("<h1>Servlet ModelController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
+>>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
         }
     }
 
