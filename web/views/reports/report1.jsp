@@ -5,7 +5,7 @@
     Author     : Luis   
 --%>
    
-<%@include file="../../template/auth.jsp" %>
+
 
 <%@include file="../../template/menu.jsp" %>
 

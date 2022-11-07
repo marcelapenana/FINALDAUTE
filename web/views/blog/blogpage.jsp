@@ -3,6 +3,7 @@
     Created on : 6 nov. 2022, 15:34:09
     Author     : najera
 --%>
+<%@include file="../../template/auth.jsp" %>
 <%@page import="com.modelo.Blog"%>
 <%@page import="com.modelo.BlogDAO"%>
 <%@page import="com.modelo.UsersC"%>

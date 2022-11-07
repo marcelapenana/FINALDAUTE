@@ -32,16 +32,16 @@ INSERT INTO clients(cli_name, cli_date_birth, cli_dui, cli_residence, cli_teleph
 ('Luis Gerardo Henriquez Rodriguez', '2002-09-04', '06301149-2', 'San Miguel de Mercedez, Chalatenango, El Salvador', '9899-0988', 3);
 
 INSERT INTO models(mod_code, mod_name, mod_year, mod_price, mod_color, mod_brand_id) VALUES 
-("1", "Picanto EX", "2022", "14.599", "GRIS", 3),
-("2", "Sentra LS","2018","16.222","BLANCO", 2),
-("3", "Model 3", "2021", "31.893", "AZUL", 5),
-("4", "GLE 450 AMG","2022","125.499","NEGRO", 8),
-("5", "Camaro", "2019", "23.432", "VERDE", 6),
-("6", "Challenger","2020","80.322","ROJO", 13),
+("1", "Picanto EX", "2022", "14599", "GRIS", 3),
+("2", "Sentra LS","2018","16222","BLANCO", 2),
+("3", "Model 3", "2021", "31893", "AZUL", 5),
+("4", "GLE 450 AMG","2022","125499","NEGRO", 8),
+("5", "Camaro", "2019", "23432", "VERDE", 6),
+("6", "Challenger","2020","80322","ROJO", 13),
 ("7", "Frontier Pro 4-EX", "2022", "42.599", "GRIS", 2),
-("8", "Urus", "2018", "159.876", "GRIS", 9),
-("9", "840i sDrive","2022","88.151","AZUL", 12),
-("10", "Elantra GT","2018","12.359","CAFE", 7);
+("8", "Urus", "2018", "159876", "GRIS", 9),
+("9", "840i sDrive","2022","88151","AZUL", 12),
+("10", "Elantra GT","2018","12359","CAFE", 7);
 
 SELECT * FROM users;
 SELECT * FROM roles;

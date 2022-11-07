@@ -3,6 +3,7 @@
     Created on : 6 nov. 2022, 14:46:28
     Author     : najera
 --%>
+
 <%@page import="com.modelo.Brands"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.modelo.BrandsDAO"%>

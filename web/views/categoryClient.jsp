@@ -3,6 +3,7 @@
     Created on : 6 nov. 2022, 13:09:04
     Author     : najera
 --%>
+
 <%@page import="com.modelo.CategoryClient"%>
 <%@page import="com.modelo.CategoryClientDAO"%>
 <%@page import="java.util.ArrayList"%>
