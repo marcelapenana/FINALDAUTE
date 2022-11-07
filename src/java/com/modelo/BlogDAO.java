@@ -44,7 +44,7 @@ public class BlogDAO extends Conexion {
         ArrayList<Blog> listaBlogs = new ArrayList<>();
         try {
             this.conectar();
-            String sql = "SELECT * FROM blog b INNER JOIN users u ON b.blo_user_id = u.use_id";
+            String sql = "SELECT * FROM blog b INNER JOIN users u ON b.blo_user_name = u.use_username";
             PreparedStatement pre = this.getCon().prepareStatement(sql);
             ResultSet rs = pre.executeQuery();
             while (rs.next()) {

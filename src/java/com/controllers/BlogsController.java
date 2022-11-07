@@ -9,6 +9,7 @@ import com.modelo.BlogDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Esteban Alvarenga
  */
+@WebServlet(name = "BlogsController", urlPatterns = {"/BlogsController"})
 public class BlogsController extends HttpServlet {
 
     /**
@@ -40,7 +42,7 @@ public class BlogsController extends HttpServlet {
             String header = request.getParameter("txtHeader");
             String parrafo = request.getParameter("txtParrafo");
             String datetime = request.getParameter("nowdate");
-            String codigoUsuario = request.getParameter("sCodeUser");
+            String codigoUsuario = request.getParameter("txtAutor");
             String mensaje = "";
                
             // INSTANCIAS
