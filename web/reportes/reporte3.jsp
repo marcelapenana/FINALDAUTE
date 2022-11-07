@@ -71,7 +71,7 @@
                     byte[] bytes = JasperRunManager.runReportToPdf(file.getPath(), parametros, con.getCon());
 
 
-                    response.getOutputStream().close();
+                    response.reset();
                     ServletOutputStream output = response.getOutputStream();
                     response.setContentType("application/pdf");
                     response.setContentLength(bytes.length);

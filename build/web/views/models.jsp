@@ -96,11 +96,11 @@
                                 ID
                                 <input type="text" name="txtCodigo" id="txtCodigo" class="form-control" value="0" readonly>
                                 Código (VIN)
-<<<<<<< HEAD
+
                                 <input type="text" name="txtCodName" id="txtCodName" class="form-control" required minlength="15" maxlength="15" placeholder="EST3B4N41V4R3NG4">
-=======
+
                                 <input type="text" name="txtCodName" id="txtCodName" class="form-control"  placeholder="">
->>>>>>> be26280f625cdc8200bc07bb745530bfd0a6f8b0
+
                                 Nombre Modelo
                                 <input type="text" name="txtNombre" id="txtNombre" class="form-control" required minlength="1" maxlength="50" placeholder="Picanto EX">
                                 Año del Modelo
