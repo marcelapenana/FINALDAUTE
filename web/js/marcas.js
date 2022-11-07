@@ -8,8 +8,6 @@ $('body').on('click','#editar',function(){
     
 });
 
-
-
 $('body').on('click','#eliminar',function(){
     llenarFormulario($(this).closest('tr'));
     
@@ -18,12 +16,12 @@ $('body').on('click','#eliminar',function(){
 
 
 function llenarFormulario(fila){
-    var bra_id = $(fila).children('td:eq(0)').html();
-       var bra_name = $(fila).children('td:eq(1)').html();
+    var codigo = $(fila).children('td:eq(0)').html();
+       var nombre = $(fila).children('td:eq(1)').html();
    
         
-       $('#txtCodigo').val(bra_id);
-       $('#txtNombre').val(bra_name);  
+       $('#txtCodigo').val(codigo);
+       $('#txtNombre').val(nombre);  
       
       
        

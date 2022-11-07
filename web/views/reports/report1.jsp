@@ -1,18 +1,12 @@
 <%-- 
-<<<<<<< HEAD
+
     Document   : report1      
     Created on : 07-Oct-2022, 08:52:31
     Author     : Luis   
 --%>
    
 <%@include file="../../template/auth.jsp" %>
-=======
-    Document   : report1
-    Created on : 6 nov. 2022, 15:37:18
-    Author     : najera
---%>
 
->>>>>>> 59b52186d128f857dff74922fde74d1b361cf4cf
 <%@include file="../../template/menu.jsp" %>
 
 <div class="row text-center mb-1 pt-2">
@@ -156,8 +150,7 @@
 --%>
      
 </body>
-<<<<<<< HEAD
+
 </html>   
-=======
-</html> 
->>>>>>> 59b52186d128f857dff74922fde74d1b361cf4cf
+
+

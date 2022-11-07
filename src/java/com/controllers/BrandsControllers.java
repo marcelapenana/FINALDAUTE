@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author najera
  */
-@WebServlet(name = "BrandControllers", urlPatterns = {"/BrandControllers"})
+@WebServlet(name = "BrandsControllers", urlPatterns = {"/BrandsControllers"})
 public class BrandsControllers extends HttpServlet {
 
     /**
@@ -35,42 +35,38 @@ public class BrandsControllers extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             
-             int bra_id =Integer.parseInt(request.getParameter("txtCodigo"));
-           String bra_name= request.getParameter("txtNombre");
-            
-            
-            Brands b=new Brands(bra_id, bra_name);
-            BrandsDAO  brandsDAO =new BrandsDAO();
-            
-            
-          int res = 0;
+             int codigo = Integer.parseInt(request.getParameter("txtCodigo"));
+            String nombre = request.getParameter("txtNombre");
+
+            Brands cat = new Brands(codigo, nombre);
+            BrandsDAO catDAO = new BrandsDAO();
             String mensaje = "";
-            if (request.getParameter("btnAgregar")!=null) {
-                res =brandsDAO.insertarBrands(b);
-                mensaje = (res!=0)?"modelo insertado con exito" : "Error al insertar modelo";
+
+            if (request.getParameter("btnAgregar") != null) {
+                int res = catDAO.insertarB(cat);
+                mensaje = (res != 0) ? "CATEGORIA INSERTADA" : "ERROR AL INSERTAR";
             }
-           
-            
-            else if (request.getParameter("btnEditar")!=null) {
-                res = brandsDAO.modificarBrands(b);
-                mensaje = (res!=0)?"modelo editado con exito" : "Error al editar modelo";
+            if (request.getParameter("btnEliminar") != null) {
+                int res = catDAO.eliminarB(cat);
+                mensaje = (res != 0) ? "CATEGORIA ELIMINADA" : "ERROR AL ELIMINAR";
             }
-            
-                else if (request.getParameter("btnEliminar")!=null) {
-                res = brandsDAO.eliminarCliente(b);
-                mensaje = (res!=0)?"modelo eliminado con exito" : "Error al eliminar  modelo";
+            if (request.getParameter("btnEditar") != null) {
+                int res = catDAO.modificarB(cat);
+                mensaje = (res != 0) ? "CATEGORIA MODIFICADA" : "ERROR AL MODIFICAR ";
             }
-            request.setAttribute("mensaje",mensaje);
+
+            request.setAttribute("mensaje", mensaje);
+
             request.getRequestDispatcher("views/marcas.jsp").forward(request, response);
-            
+
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet BrandControllers</title>");            
+            out.println("<title>Servlet BrandsControllers</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet BrandControllers at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet BrandsControllers at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
