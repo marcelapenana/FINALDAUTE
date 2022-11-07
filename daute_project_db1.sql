@@ -1,3 +1,6 @@
+/*
+	BASE DE DATOS - TABLAS
+*/
 CREATE DATABASE daute_project; 
 USE daute_project;
 
@@ -5,17 +8,11 @@ CREATE TABLE roles (
 	rol_id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     rol_type VARCHAR(20) NOT NULL
 );
-insert into roles(rol_type) values ('Admin'), ('Cashier');
-insert into roles(rol_type) values ('Gerent');
-select * from roles;
 
 CREATE TABLE category_client (
 	cat_id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     cat_type VARCHAR(20) NOT NULL
 );
-
-insert category_client(cat_type) values("M");
-UPDATE category_client SET cat_type="N" WHERE cat_id=1;
 
 CREATE TABLE brands (
 	bra_id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -31,10 +28,6 @@ CREATE TABLE users (
     use_rol_id INTEGER(10) NOT NULL,
     FOREIGN KEY (use_rol_id) REFERENCES roles(rol_id)
 );
-
-insert into users(use_real_name, use_username, use_password, use_rol_id) values 
-('Esteban', 'Alvarenga144', 'Alvarenga144', 1), ('Luis', 'luis22', '1234', 1), ('Gerardo', 'cajero22', '1234', 2);
-select * from users;
 
 CREATE TABLE blog (
 	blo_id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -55,13 +48,6 @@ CREATE TABLE clients (
     cli_category_id INTEGER(10) NOT NULL,
     FOREIGN KEY (cli_category_id) REFERENCES category_client(cat_id)
 );
-
-insert into clients(cli_name, cli_date_birth, cli_dui, cli_residence, cli_telephone, cli_category_id) values
-('Esteban Vladimir Alvarenga Gutiérrez', '2002-10-17', '06379722-6', 'San Rafael, Chalatenango, El Salvador', '7576-8136', 1),
-('Pamela Lisbeth Perez Mejía', '2004-06-08', '34379722-7', 'Centro Urbano de Santa Tecla, La Libertad, El Salvador', '2234-4321', 1),
-('Marcela Beatriz Nájera Peña', '2002-05-17', '06239232-4', 'Santo Tómas, Cuscatlán, El Salvador', '8897-3445', 1),
-('Bryan Aaron Ramirez Barrientos', '2001-11-23', '06323422-3', 'Colonia Santa Lucia, Soyapango, El Salvador', '5554-5665', 1),
-('Luis Gerardo Henriquez Rodriguez', '2002-09-04', '06301149-2', 'San Miguel de Mercedez, Chalatenango, El Salvador', '9899-0988', 1);
 
 CREATE TABLE models (
 	mod_id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -97,29 +83,12 @@ CREATE TABLE sale_detail_cars (
     FOREIGN KEY (sdc_sale) REFERENCES sale_ticket(sal_id)
 );
 
-
-### QUERIES
-
-#AUTH
-SELECT u.*, r.rol_type
-FROM users u
-JOIN roles r on u.use_rol_id = r.rol_id
-WHERE u.use_username = 'luis22' and u.use_password = '1234';
-
-#Clients
+SELECT * FROM blog;
+SELECT * FROM brands;
+SELECT * FROM category_client;
 SELECT * FROM clients;
-
-SELECT * FROM clients c INNER JOIN category_client k ON c.cli_category_id = k.cat_id;
-
-#Blogs
-insert into blog(blo_header, blo_paragraph, blo_publish_date, blo_user_id) values
-("Los nuevos autos para 2023", "Parrafo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.Parrafo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet",
-"2022-11-04 01:47:00", 4);
-insert into blog(blo_header, blo_paragraph, blo_publish_date, blo_user_id) values
-("Autos más Vendidos del año de la Pandemia", "Parrafo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.Parrafo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet",
-"2022-11-05 23:56:05", 1);
-select * from blog;
-
-SELECT * FROM blog b INNER JOIN users u ON b.blo_user_id = u.use_id;
-
-SELECT * FROM clients WHERE cli_dui = "06379722-6";
+SELECT * FROM models;
+SELECT * FROM roles;
+SELECT * FROM sale_detail_cars;
+SELECT * FROM sale_ticket;
+SELECT * FROM users;
